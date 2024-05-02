@@ -10,7 +10,7 @@ const localSchema = new Schema (
     },
     style: {
         type: String,
-        enum: style,
+        enum: ["Rock", "Dance", "Pop", "Indie"],
         required: 'Es necesario elegir un estilo'
     },
     address: {
@@ -34,9 +34,9 @@ const localSchema = new Schema (
         max: [100, 'Capacidad máxima de personas en la sala'],
     },
     image: {
-        type: Image,
+        type: String,
         min: [3, 'imágenes del local'],
-        required: true
+        required: false
     }
     },
 {
