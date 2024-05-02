@@ -35,14 +35,29 @@ const localSchema = new Schema (
     },
     image: {
         type: String,
-        min: [3, 'imágenes del local'],
+        min: [3, 'Imágenes del local'],
         required: false
     }
     },
 {
-    timestamps: true
+    timestamps: true,
+    toJSON:{
+        virtuals: true,
+        transform: (doc, ret) => {
+            ret.id = ret._id; 
+            delete ret._id;
+            delete ret.__v;
+            return ret
+        }
+    }
 }
-);
+); 
+localSchema.virtual("rating", {
+    ref:"Rating", 
+    localField: "_id",
+    foreignField: "local", 
+    justOne:"true"
+});
 
 localSchema.index({ location: '2dsphere'});
 module.exports = mongoose.model('Local', localSchema);

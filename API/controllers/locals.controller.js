@@ -24,6 +24,7 @@ module.exports.create = (req, res, next) => {
 
 module.exports.list = (req, res, next) => {
     Local.find()
+        .populate("rating")
         .then((locals) => 
             res.status(200).json(locals))
         .catch((next))
@@ -32,6 +33,7 @@ module.exports.list = (req, res, next) => {
 
 module.exports.detail = (req, res, next) => {
     Local.findById(req.params.id)
+            .populate("rating")
             .then((local => {
             if (local) {
                 res.json(local)
