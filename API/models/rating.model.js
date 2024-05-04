@@ -3,13 +3,19 @@ const Schema = mongoose.Schema;
 
 const ratingSchema = new Schema(
     {
-        rating: [{
-            type: Number
-          }],
+        rating: {
+            type: Number,
+            min: 0,
+            max: 5
+          },
         
         local: {
             type: Schema.Types.ObjectId,
             ref: "Local",
+        },
+        author: {
+            type: Schema.Types.ObjectId,
+            ref: "User",
         },
         
     },

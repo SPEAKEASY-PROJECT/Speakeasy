@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 const bcrypt = require("bcrypt");
 
-const {schema} = require("./locals.model");
+
 
 const userSchema = new Schema(
     {
@@ -60,7 +60,7 @@ const userSchema = new Schema(
 );
 
 
-schema.pre('save', function (next) {
+userSchema.pre('save', function (next) {
     if (this.isModified('password')) {
         bcrypt
             .hash(this.password, 10)

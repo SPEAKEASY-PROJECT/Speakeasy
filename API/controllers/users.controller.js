@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
-const User = require ("../models/users.model");
-const { v4:uuidv4 } = require("uuid");
+const User = require("../models/users.model");
+const jwt = require("jsonwebtoken");
+
 
 module.exports.create = (req, res, next) => {
     User.create({
@@ -35,11 +36,15 @@ module.exports.login = (req, res, next) => {
             .checkPassword(req.body.password)
             .then((match) => {
                 if (match) {
-                    const sessionId = uuidv4();
-                    sessions.push({ userId: user.id, sessionId });
+                   const accessToken = jwt.sign(
+                    {
+                     sub: user.id, 
+                     exp: Date.now() / 1000 + 3600, 
+                    },
+                    process.env.JWT_SECRET
+                    );
 
-                    res.set("Sey-Cookie", `sessionId=${sessionId}`)
-                    res.send();
+                    res.json({ accessToken });
                 } else {
                     res.status(401).json({ message: "Credenciales inválidas" });
                 }
