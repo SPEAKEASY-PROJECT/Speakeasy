@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 const dataStyle = require("../data/styles.json");
+// const bcrypt = require("bcrypt");   para poner password en los locales
 
 const localSchema = new Schema (
     {

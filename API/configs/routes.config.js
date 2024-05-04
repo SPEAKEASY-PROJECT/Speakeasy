@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const locals = require("../controllers/locals.controller");
+const users = require("../controllers/users.controller");
 
 //Locals routes
 
@@ -14,6 +15,8 @@ router.delete('/locals/:id', locals.delete);
 
 
 //Users routes
+router.post('/users', users.create);
+router.post('/login', users.login);
 
 
 
