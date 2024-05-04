@@ -34,13 +34,13 @@ module.exports.list = (req, res, next) => {
 module.exports.detail = (req, res, next) => {
     Local.findById(req.params.id)
             .populate("rating")
-            .then((local => {
+            .then((local) => {
             if (local) {
                 res.json(local)
             } else {
                 res.status(404).json({ message: "No se ha encontrado el local"});
         }
-    }))
+    })
         .catch(next)
 };
 
