@@ -1,9 +1,13 @@
-import ('./home.css');
+import './home.css';
 // import {imagenGanster } from '../../images/gansterUno.jpg';
 
 function Home() {
+
   return (
     <div>
+      HOLA
+
+      
       <div id="popUpsContainer">
         <div className="popUp">
             <div className="fondoPop">
@@ -16,4 +20,4 @@ function Home() {
   )
 }
 
-export default Home
+export default Home;
