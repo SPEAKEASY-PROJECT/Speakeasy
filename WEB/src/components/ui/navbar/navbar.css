@@ -1,3 +1,36 @@
-.navbar {
-    background-color: green;
+.header {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: 20px;
+ background-color: rgba(36, 31, 31, 0.729);
+ background-position: center;
+ background-size: cover;
 }
+
+.logo-container {
+ padding-top: 3px;
+ cursor: pointer;
+}
+
+/* .main-navbar {
+ position: 
+} */
+
+
+.nav-container {
+ display: flex;
+}
+
+.nav-container li {
+ margin: 0 80px;
+ list-style: none;
+}
+
+.nav-container li a {
+ text-decoration: none;
+ color: white;
+ font-weight: 500;
+ font-size: 18px;
+}
+
