@@ -1,21 +1,53 @@
 import './register.css';
 import { useForm } from 'react-hook-form';
+import { useEffect, useState, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { createUser } from '../../services/api.service';
+
 
 function Register() {
+    const navigate = useNavigate();
+    const latitude = useRef(0);
+    const longitude = useRef(0);
+
     const {
         register,
         handleSubmit,
-        watch,
         formState: { errors }
     } = useForm();
+    const [error, setError] = useState();
 
-    function onSubmit(data) {
-        console.info(data);
+    useEffect(() => {
+        navigator.geolocation.getCurrentPosition((position) => {
+            latitude.current = position.coords.latitude;
+            longitude.current = position.coords.longitude;
+        });
+    }, []);
+    
+    async function onSubmit(data) {
+        try {
+            setError(false);
+
+             await createUser({
+                ...data,
+                location: {
+                type: 'Point',
+                coordinates: [latitude.current, longitude.current],
+                },
+        });
+
+        navigate('/login');
+        } catch (err) {
+            setError(true)
+        }
     }
 
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
-             <div className='mb-3'>
+            {error && (
+            <div className='alert-danger'>error. rewiew form data</div>
+            )}
+            <div className='mb-3'>
                 <label htmlFor='name' className='form-label'>
                     Nombre
                 </label>
@@ -47,7 +79,7 @@ function Register() {
                 <label htmlFor='password' className='form-label'>
                     Contraseña
                 </label>
-                <input type='password' id='password' className={`form-control ${errors.password ? 'is-invalid' : ''}`} {...register('password')} />
+                <input type='password' id='contraseña' className={`form-control ${errors.password ? 'is-invalid' : ''}`} {...register('password')} />
             </div>
 
             <div className='mb-3'>

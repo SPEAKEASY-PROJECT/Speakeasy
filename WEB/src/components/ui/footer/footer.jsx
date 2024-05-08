@@ -25,23 +25,23 @@ function Footer() {
         <p>
           {/* <a href="/anunciatuconcierto" className="text-reset">Anuncia tu concierto</a> */}
         </p>
-         </div>
+          </div>
 
-         {/* <!-- Grid column Contact--> */}
-      <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-           
-        <h6 className="text-uppercase fw-bold mb-4">Contáctanos</h6>
-          <p>
-            <i className="fas fa-home me-3"></i> P.º de la Castellana, 259, Fuencarral-El Pardo, 28046 Madrid</p>
-           <p>
-            <i className="fas fa-envelope me-3"></i>
-             SpeakeasyShh@contact.com
-          </p>
-          <p>
-            <i className="fas fa-phone me-3"></i> 900 00 00 00</p>
-          <p>
-            <i className="bi bi-whatsapp me-3"></i> +34 60 00 00 000</p>
-         </div>
+          {/* <!-- Grid column Contact--> */}
+        <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            
+          <h6 className="text-uppercase fw-bold mb-4">Contáctanos</h6>
+            <p>
+              <i className="fas fa-home me-3"></i> P.º de la Castellana, 259, Fuencarral-El Pardo, 28046 Madrid</p>
+            <p>
+              <i className="fas fa-envelope me-3"></i>
+              SpeakeasyShh@contact.com
+            </p>
+            <p>
+              <i className="fas fa-phone me-3"></i> 900 00 00 00</p>
+            <p>
+              <i className="bi bi-whatsapp me-3"></i> +34 60 00 00 000</p>
+          </div>
         
         {/* <!-- Grid column Locals--> */}
       <div>
@@ -49,17 +49,17 @@ function Footer() {
       </div>
 
       {/* Section: Social media  */}
-      <section class="d-flex flex-wrap justify-content-evenly align-items-center p-4"></section>
+      <section className="d-flex flex-wrap justify-content-evenly align-items-center p-4"></section>
 
       {/* Right  */}
       <div className="d-flex justify-content-around align-itmes-center">
         <h4 className="me-3 text-dark fw-bold"><u>Marta Bravo</u></h4>
-         <a href="https://www.linkedin.com/in/marta-bravo-su%C3%A1rez-3272b710a/" className="me-4 text-dark">
-           <i className="fab fa-linkedin"></i>
-         </a>
-         <a href="https://github.com/martabs92" className="me-4 text-dark">
-           <i className="fab fa-github"></i>
-         </a>
+          <a href="https://www.linkedin.com/in/marta-bravo-su%C3%A1rez-3272b710a/" className="me-4 text-dark">
+            <i className="fab fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/martabs92" className="me-4 text-dark">
+            <i className="fab fa-github"></i>
+          </a>
       </div>
 
       {/* Left  */}

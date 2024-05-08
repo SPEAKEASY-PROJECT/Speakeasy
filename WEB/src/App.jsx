@@ -6,6 +6,7 @@ import Navbar from './components/ui/navbar/navbar';
 import Footer from "./components/ui/footer/footer";
 import Home from './pages/home/home';
 import Register from './pages/register/register';
+import Login from './pages/login/login';
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
         <Routes>
           <Route path="/" element= {<Home />} />
           <Route path="/register" element= {<Register />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
         <Navbar />
         <RegisterBar />
