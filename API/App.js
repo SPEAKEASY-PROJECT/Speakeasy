@@ -5,6 +5,7 @@ const logger = require("morgan");
 
 require("./configs/db.config");
 const router = require ("./configs/routes.config");
+const cors = require("./middlewares/cors.middleware");
 
 const app = express();
 
@@ -12,6 +13,7 @@ const app = express();
 //Middlewares
 app.use(logger('dev'));
 app.use(express.json());
+app.use(cors)
 
 //Routes
 app.use("/api/v1", router);

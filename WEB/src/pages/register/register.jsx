@@ -45,7 +45,7 @@ function Register() {
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
             {error && (
-            <div className='alert-danger'>error. rewiew form data</div>
+            <div className='alert-danger'>Error, no se ha podido acceder</div>
             )}
             <div className='mb-3'>
                 <label htmlFor='name' className='form-label'>
@@ -79,7 +79,7 @@ function Register() {
                 <label htmlFor='password' className='form-label'>
                     Contraseña
                 </label>
-                <input type='password' id='contraseña' className={`form-control ${errors.password ? 'is-invalid' : ''}`} {...register('password')} />
+                <input type='password' id='password' className={`form-control ${errors.password ? 'is-invalid' : ''}`} {...register('password')} />
             </div>
 
             <div className='mb-3'>
@@ -103,4 +103,4 @@ function Register() {
     )
 }
 
-export default Register
+export default Register;

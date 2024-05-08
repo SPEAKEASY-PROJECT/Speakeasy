@@ -1,9 +1,10 @@
 const jwt = require("jsonwebtoken");
 const User = require("../models/users.model");
 
+
 module.exports.checkAuth = ( req, res, next) => {
     console.log(req.headers?.authorization)
-    const [method, token] = req.headers?.authorization?.split(' ');
+    const [method, token] = req.headers?.authorization?.split(' ') || [];
     console.log("TOKEN", token)
     jwt.verify(token, process.env.JWT_SECRET, (err, decoded) => {
         if (err) {
