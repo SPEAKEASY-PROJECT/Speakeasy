@@ -83,3 +83,5 @@ userSchema.methods.checkPassword = function (password) {
 
 userSchema.index({ location: '2dsphere'});
 module.exports = mongoose.model('User', userSchema);
+
+

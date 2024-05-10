@@ -26,7 +26,6 @@ module.exports.create = (req, res, next) => {
     });
 };
 
-const sessions = [];
 
 module.exports.login = (req, res, next) => {
     User.findOne({ email: req.body.email })
@@ -70,7 +69,7 @@ module.exports.detail = (req, res, next) => {
             if (user) {
                 res.json(user)
             } else {
-                res.status(404).json({ message: "No se ha encontrado usuario"});
+                res.status(404).json({ message: "No se ha encontrado el usuario"});
         }
     })
         .catch(next)
@@ -114,3 +113,9 @@ module.exports.delete = (req, res, next) => {
 // module.exports.profile = (req, res) => {
 //     res.json(req.user);
 // };
+
+
+
+
+
+

@@ -7,6 +7,7 @@ import Footer from "./components/ui/footer/footer";
 import Home from './pages/home/home';
 import Register from './pages/register/register';
 import Login from './pages/login/login';
+import Locals from './pages/locals/locals';
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
           <Route path="/" element= {<Home />} />
           <Route path="/register" element= {<Register />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/locals" element={<Locals />} />
         </Routes>
         <Navbar />
         <RegisterBar />
