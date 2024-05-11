@@ -17,10 +17,10 @@ function Login() {
 
     async function onSubmit(data) {
         try {
-            await login(data);
-            console.log(response);
+            const response = await login(data);
+            console.log({response});
 
-            navigate('/locals')
+            navigate('/home')
 
             
             } catch (err) {
@@ -30,9 +30,6 @@ function Login() {
 
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
-            {/* {error && (
-            <div className='alert-danger'>hola que pasa</div>
-            )} */}
             
             <div className='mb-3'>
                 <label htmlFor='email' className='form-label'>

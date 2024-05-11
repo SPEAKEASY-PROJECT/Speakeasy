@@ -4,30 +4,31 @@ const http = axios.create({
     baseURL: 'http://localhost:3000/api/v1',
 });
 
-// http.interceptors.request.use(function (config) {
-//   config.headers.authorization = `BEARER ${localStorage.getItem("token")}`;
-//   return config;
-// });
+http.interceptors.request.use(function (config) {
+  config.headers.authorization = `BEARER ${localStorage.getItem("token")}`;
+  return config;
+});
 
-// // Add a response interceptor
-// http.interceptors.response.use(
-//   function (response) {
-//     return response;
-//   },
-//   function (error) {
-//     if (
-//       error.response.status === 401 &&
-//       location.pathname !== "/login" &&
-//       location.pathname !== "/register"
-//     ) {
-//       // navigate refreshing page
-//       localStorage.removeItem("token");
-//       window.location.replace("/login");
-//     }
+// Add a response interceptor
+http.interceptors.response.use(
+  function (response) {
+    return response;
+  },
+  function (error) {
+    if (
+      error.response.status === 401 &&
+      location.pathname !== "/login" &&
+      location.pathname !== "/register"
+    ) {
+      // navigate refreshing page
+      localStorage.removeItem("token");
+      window.location.replace("/login");
+    }
 
-//     return Promise.reject(error);
-//   }
-// );
+    return Promise.reject(error);
+  }
+);
+
 
 export function createUser(data) {
     return http.post("/users", data);
@@ -39,4 +40,9 @@ export function login(data) {
   
       return response;
     });
+  }
+
+
+export function getLocals() {
+    return http.get("/locals", { headers: { authorization: accessToken}})
   }

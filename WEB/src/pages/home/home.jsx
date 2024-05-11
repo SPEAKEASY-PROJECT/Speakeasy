@@ -1,23 +1,9 @@
-import './home.css';
-// import {imagenGanster } from '../../images/gansterUno.jpg';
+import React from 'react'
 
 function Home() {
-
   return (
-    <div>
-      HOLA
-
-      
-      <div id="popUpsContainer">
-        <div className="popUp">
-            <div className="fondoPop">
-              {/* <img src={ imagenGanster } alt="ganster abriendo una puerta" /> */}
-                    <button className="textPop" type="button" ><a href="./register.html">tienes edad para estar aqui?</a></button>
-            </div>
-        </div>
-    </div>
-    </div>
+    <div>home!</div>
   )
 }
 
-export default Home;
+export default Home
