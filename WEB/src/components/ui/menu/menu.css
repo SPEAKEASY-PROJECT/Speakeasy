@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: block;
+    width: 300px;
+    height: 100vh;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    background-color: #000;
+    color: #ffffff;
+}
+
+.logo {
+    max-width: 14rem;
+    margin-left: 100px;
+}
+.nav{
+    display: block;
+    background-color: transparent;
+    margin-left: 50px;
+}
+.nav-list {
+    list-style-type: none;
+    background-color: transparent;
+    display: block;
+    gap: 2rem;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.menu,
+.cerrar {
+    display: none;
+}
+.cerrar {
+    display: none;
+}
+.nav.visible {
+    background-color: #000;
+}
+
+@media  screen and (max-width: 550px) {
+.menu {
+    display: block;
+    border: 0;
+    font-size: 2rem;
+    cursor: pointer;
+    background-color: transparent;
+    color: #ffffff;
+    margin-left: 100px;
+    margin-top: 20px;
+}
+.cerrar {
+    display: block;
+    border: 0;
+    font-size: 1rem;
+    background-color: transparent;
+    cursor: pointer;
+    color: #ffffff;
+    margin-left: 5px;
+}
+
+.nav {
+    opacity: 0;
+    visibility: visible;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 1rem;
+    position: absolute;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    background-color: transparent;
+    padding: 2rem;
+    color: #ffffff;
+    margin-left: 50px;
+}
+.nav.visible {
+    opacity: 1;
+    visibility: visible;
+    background-color: transparent;
+}
+
+.nav-list {
+    flex-direction: column;
+    align-items: end;
+    background-color: transparent;
+}
+.nav-list li a {
+    align-items: center;
+    background-color: transparent;
+}
+}
+    

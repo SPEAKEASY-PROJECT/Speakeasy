@@ -14,6 +14,7 @@ http.interceptors.response.use(
   function (response) {
     return response;
   },
+
   function (error) {
     if (
       error.response.status === 401 &&
@@ -24,7 +25,6 @@ http.interceptors.response.use(
       localStorage.removeItem("token");
       window.location.replace("/login");
     }
-
     return Promise.reject(error);
   }
 );

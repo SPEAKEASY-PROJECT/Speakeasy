@@ -1,32 +1,44 @@
 import './App.css';
 import { Route, Routes } from "react-router-dom";
-import Functional from './components/functional/functional';
-import RegisterBar from './components/registerBar/registerBar';
-import Navbar from './components/ui/navbar/navbar';
-import Footer from "./components/ui/footer/footer";
-import Welcome from './pages/welcome/welcome'
-import Register from './pages/register/register';
-import Login from './pages/login/login';
+import Welcome from './pages/welcome/welcome';
+import Intro from './pages/intro/intro';
 import Home from './pages/home/home';
+import Login from './pages/login/login';
+import Register from './pages/register/register';
 import Profile from './pages/profile/profile';
+import Playlist from './pages/playlist/playlist';
+import Locals from './pages/locals/locals';
+import Comunity from './pages/comunity/comunity';
+import Navbar from './components/ui/navbar/navbar';
+// import Functional from './components/functional/functional';
+import Footer from "./components/ui/footer/footer";
+import Menu from './components/ui/menu/menu';
+
 
 function App() {
 
   return (
-      <> 
+
+      <main className="flex-shrink-0">
+        <Navbar /> 
+        <Menu />
         <Routes>
-          <Route path="/" element= {<Welcome />} />
+          <Route path="/" element= {<><Welcome /></>} />
+          <Route path="/intro" element={<Intro />} />
           <Route path="/home" element={<Home />} />
-          <Route path="/register" element= {<Register />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/register" element= {<Register />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/playlist" element={<Playlist />} />
+          <Route path="/locals" element={<Locals />} />
+          <Route path="/comunity" element={<Comunity />} />
+          
         </Routes>
-        <Navbar />
-        <RegisterBar />
-        <Functional />
-        <Footer />
-      </>
-  )
+        
+        {/* {/* <Functional /> */}
+        <Footer /> 
+        </main>
+  );
 }
 
 export default App;

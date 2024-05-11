@@ -2,8 +2,8 @@ import React from 'react'
 
 function Playlist() {
   return (
-    <div>P/div>
+    <div>Playlist</div>
   )
 }
 
-export default P
+export default Playlist

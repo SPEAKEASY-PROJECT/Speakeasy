@@ -24,16 +24,15 @@ const logo = "https://res.cloudinary.com/dmzanxy93/image/upload/v1715415641/logo
       <nav className="main-navbar navbar-expand-lg ">
         <ul className="nav-container">
           <li>
-            <a href="/"> {context.user?.name}</a>
+            <a href="/">Ubicación</a>
           </li>
           <li>
-            <a href="/">Ubicación</a>
+            <a href="/"> {context.user?.name}</a>
           </li>
           <li>
             {context.user && (
               <button onClick={context.doLogout} className="btn btn-sm btn-danger">Cerrar sesión</button>
             )}
-          
           </li>
         </ul>
       </nav>
