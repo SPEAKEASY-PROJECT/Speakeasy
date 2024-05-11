@@ -7,7 +7,7 @@ import AuthContext from "../../../contexts/auth.context";
 // const renderNavLinkActive = ({ isActive }) => isActive ? 'nav-link active' : 'nav-link';
 
 function Navbar() {
-const { user, doLogout } = useContext(AuthContext);
+const context = useContext(AuthContext);
 
 const logo = "https://res.cloudinary.com/dmzanxy93/image/upload/v1715415641/logoSpeak_gqn0d0.png"
 
@@ -17,20 +17,23 @@ const logo = "https://res.cloudinary.com/dmzanxy93/image/upload/v1715415641/logo
 
      {/* logo de la web */}
      <div className="logo-container">
-       <img src={ logo } alt="logo" />
+       <img className="logo"  src={ logo } alt="logo" />
      </div>
 
       {/* links de navegación */}
       <nav className="main-navbar navbar-expand-lg ">
         <ul className="nav-container">
           <li>
-            <a href="/"> {user?.name}</a>
+            <a href="/"> {context.user?.name}</a>
           </li>
           <li>
             <a href="/">Ubicación</a>
           </li>
           <li>
-            <a href="/">Logout</a>
+            {context.user && (
+              <button onClick={context.doLogout} className="btn btn-sm btn-danger">Cerrar sesión</button>
+            )}
+          
           </li>
         </ul>
       </nav>

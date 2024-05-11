@@ -1,28 +1,27 @@
 import './login.css';
 import { useForm } from 'react-hook-form';
-import { useState } from 'react';
-import { login } from '../../services/api.service';
+import { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import AuthContext from '../../contexts/auth.context';
 
 
 function Login() {
     const navigate = useNavigate();
+    const { doLogin } = useContext(AuthContext);
 
     const {
         register,
         handleSubmit,
         formState: { errors }
     } = useForm();
+
     const [error, setError] = useState();
 
     async function onSubmit(data) {
         try {
-            const response = await login(data);
-            console.log({response});
-
+            await doLogin(data);
+        
             navigate('/home')
-
-            
             } catch (err) {
             setError(true)
         }

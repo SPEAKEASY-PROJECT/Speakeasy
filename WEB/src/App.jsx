@@ -8,6 +8,7 @@ import Welcome from './pages/welcome/welcome'
 import Register from './pages/register/register';
 import Login from './pages/login/login';
 import Home from './pages/home/home';
+import Profile from './pages/profile/profile';
 
 function App() {
 
@@ -15,9 +16,10 @@ function App() {
       <> 
         <Routes>
           <Route path="/" element= {<Welcome />} />
+          <Route path="/home" element={<Home />} />
           <Route path="/register" element= {<Register />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/home" element={<Home />} />
+          <Route path="/profile" element={<Profile />} />
         </Routes>
         <Navbar />
         <RegisterBar />

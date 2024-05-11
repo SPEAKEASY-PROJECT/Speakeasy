@@ -42,7 +42,15 @@ export function login(data) {
     });
   }
 
+export function getProfile() {
+    return http.get('/profile');
+  }
+
 
 export function getLocals() {
     return http.get("/locals", { headers: { authorization: accessToken}})
   }
+
+export function logout() {
+  localStorage.removeItem("token");
+}

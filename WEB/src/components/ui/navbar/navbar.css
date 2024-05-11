@@ -8,6 +8,11 @@
  background-size: cover;
 }
 
+.logo {
+    width: 200px;
+    height: auto;
+}
+
 .logo-container {
  padding-top: 3px;
  cursor: pointer;
