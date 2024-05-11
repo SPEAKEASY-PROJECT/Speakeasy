@@ -1,6 +1,6 @@
 import ("./navbar.css");
 import { useContext } from "react";
-import { Link, NavLink } from "react-router-dom";
+// import { Link, NavLink } from "react-router-dom";
 import AuthContext from "../../../contexts/auth.context";
 
 // import { Logo } from "../../../../public/images/logo.jpg";
@@ -24,7 +24,7 @@ const logo = "https://res.cloudinary.com/dmzanxy93/image/upload/v1715415641/logo
       <nav className="main-navbar navbar-expand-lg ">
         <ul className="nav-container">
           <li>
-            <a href="/"> {user.name}</a>
+            <a href="/"> {user?.name}</a>
           </li>
           <li>
             <a href="/">Ubicación</a>

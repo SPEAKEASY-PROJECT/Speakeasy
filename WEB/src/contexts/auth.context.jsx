@@ -3,9 +3,9 @@ import { createContext } from "react";
 
 const AuthContext = createContext();
 
-function AuthContextProvider({ children }) {
+export function AuthContextProvider({ children }) {
     const value = {
-        name: Marta,
+        name: 'Marta',
     };
 
     return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;

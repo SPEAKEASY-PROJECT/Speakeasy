@@ -24,6 +24,5 @@ router.get('/users/:id', auth.checkAuth, users.detail);
 router.patch('/users/:id', auth.checkAuth, users.update);
 router.delete('/users/:id', auth.checkAuth, users.delete);
 
-router.profile
 
 module.exports = router;
