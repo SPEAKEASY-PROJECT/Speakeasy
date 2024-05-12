@@ -3,11 +3,11 @@ import ("./footer.css");
 function Footer() {
 
   return (
-    <footer className="fmt-auto pt-3 text-center text-lg-start bg-body-tertiary text-dark fw-bold bgFooter">
+    <footer className="fmt-auto pt-3 text-center text-lg-start bg-warning-subtle text-dark fw-bold bgFooter">
       
       
       <div className="container text-center">
-        <span className="text-light">SpeakeasyShh web</span>
+        <span className="text-dark fst-italic">SpeakEasy Shh </span>
       </div>
 
 

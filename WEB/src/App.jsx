@@ -9,19 +9,15 @@ import Profile from './pages/profile/profile';
 import Playlist from './pages/playlist/playlist';
 import Locals from './pages/locals/locals';
 import Comunity from './pages/comunity/comunity';
-import Navbar from './components/ui/navbar/navbar';
-// import Functional from './components/functional/functional';
-import Footer from "./components/ui/footer/footer";
-import Menu from './components/ui/menu/menu';
-
+// // import Functional from './components/functional/functional';
+import BaseComponents from './components/ui/baseComponents/baseComponents';
 
 function App() {
 
   return (
 
       <main className="flex-shrink-0">
-        <Navbar /> 
-        <Menu />
+        <BaseComponents />
         <Routes>
           <Route path="/" element= {<><Welcome /></>} />
           <Route path="/intro" element={<Intro />} />
@@ -36,7 +32,6 @@ function App() {
         </Routes>
         
         {/* {/* <Functional /> */}
-        <Footer /> 
         </main>
   );
 }
