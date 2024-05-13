@@ -8,7 +8,7 @@ const userSchema = new Schema(
     {
         name: {
             type: String,
-            required: 'Nombre y apellidos'
+            required: 'Nombre'
         },
         birthDate: {
             type: Date,
