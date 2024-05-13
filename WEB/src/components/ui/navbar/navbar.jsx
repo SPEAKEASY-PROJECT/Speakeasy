@@ -13,7 +13,7 @@ const context = useContext(AuthContext);
 
     <nav className="main-navbar navbar-expand-lg ">
       <ul className="nav-container">
-        <li>Ubicación: {context.user?.location}</li>
+        <li>Ubicación:</li>
         <li>Nombre de usuario: {context.user?.name}</li>
         <li>{context.user && (
               <button onClick={context.doLogout} className="btn btn-sm btn-danger btn-color">Cerrar sesión</button>

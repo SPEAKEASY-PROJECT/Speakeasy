@@ -19,7 +19,7 @@ function App() {
       <main className="flex-shrink-0">
         <BaseComponents />
         <Routes>
-          <Route path="/" element= {<><Welcome /></>} />
+          <Route path="/" element= {<Welcome />} />
           <Route path="/intro" element={<Intro />} />
           <Route path="/home" element={<Home />} />
           <Route path="/login" element={<Login />} />
