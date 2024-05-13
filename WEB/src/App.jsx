@@ -9,7 +9,7 @@ import Profile from './pages/profile/profile';
 import Playlist from './pages/playlist/playlist';
 import Locals from './pages/locals/locals';
 import Comunity from './pages/comunity/comunity';
-// // import Functional from './components/functional/functional';
+// import Functional from './components/functional/functional';
 import BaseComponents from './components/ui/baseComponents/baseComponents';
 
 function App() {
@@ -28,11 +28,8 @@ function App() {
           <Route path="/playlist" element={<Playlist />} />
           <Route path="/locals" element={<Locals />} />
           <Route path="/comunity" element={<Comunity />} />
-          
-        </Routes>
-        
-        {/* {/* <Functional /> */}
-        </main>
+        </Routes> 
+      </main>
   );
 }
 

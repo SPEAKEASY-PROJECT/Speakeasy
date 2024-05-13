@@ -1,5 +1,5 @@
 import ('./menu.css')
-import React, { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 function Menu() {
 
@@ -18,14 +18,14 @@ function Menu() {
         }
     },[])*/
   return (
-    <div>
-        <img class="logo" src="./img/logoSpeak.png" alt="logo" />
-        <button id="abrir" class="menu"><i class="bi bi-list"></i></button>
-        <div onClick={handleToogle}>CLICK ME!</div>
-        <nav className={`nav ${toggle ? 'visible' : ''}`} id="nav">
-            
-            <button class="cerrar" id="cerrar"><i class="bi bi-x-lg"></i></button>
-            <ul class="nav-list">
+    <div className='menu'>
+        <img className="logo" src="../../../../images/logoSpeak.png" alt="logo" />
+        <button id="abrir" className="open"><i className="bi bi-list"></i></button>
+        <div className={`open ${toggle ? 'visible' : ''}`} id='ul-list'>
+            <button className="cerrar" onClick={handleToogle} id="cerrar"><i className="bi bi-x-lg">Adios</i></button>
+        </div>
+        <nav className='menuNav'>
+            <ul className="list">
                 <li><a href="/home">Home</a></li>
                 <li><a href="/playlist">Playlist</a></li>
                 <li><a href="/locals">Locales</a></li>

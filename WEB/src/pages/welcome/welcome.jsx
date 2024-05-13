@@ -2,6 +2,18 @@ import './welcome.css';
 
 function Welcome() {
 
+//   let edad = Number(document.querySelector("#mayordeEdad")).value;
+// console.log(edad); 
+
+// if (edad >= 18) {  
+ 
+// window.location.href = "/pages/registro.html"
+// } else {
+//        alert("Lo siento no puedes ingresar a esta pagina, eres menor de edad!");
+//        window.location.href ="https://www.google.com.ar"
+// }  
+
+
   return (
     <div id="popUpsContainer">
        <div className="popUp">
