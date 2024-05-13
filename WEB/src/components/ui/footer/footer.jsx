@@ -3,14 +3,10 @@ import ("./footer.css");
 function Footer() {
 
   return (
-    <footer className="fmt-auto pt-3 text-center text-lg-start bg-warning-subtle text-dark fw-bold bgFooter">
-      
-      
+    <footer className="fmt-auto pt-3 text-center footer">
       <div className="container text-center">
         <span className="text-dark fst-italic">SpeakEasy Shh </span>
       </div>
-
-
      {/* Grid column Map */}
       <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
         <h6 className="text-uppercase fw-bold mb-4">
@@ -72,10 +68,6 @@ function Footer() {
             <i className="fab fa-github"></i>
           </a>
       </div>
-
-
-
-
     </footer>
   )
 }
@@ -90,8 +82,5 @@ function Footer() {
 //   <!-- Copyright -->
 // </footer>
 // <!-- Footer -->
-
-
-
 
 export default Footer;
