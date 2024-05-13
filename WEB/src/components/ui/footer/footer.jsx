@@ -5,7 +5,7 @@ function Footer() {
   return (
     <footer className="fmt-auto pt-3 text-center footer">
       <div className="container text-center">
-        <span className="text-dark fst-italic">SpeakEasy Shh </span>
+        <span className="text-white fst-italic">SpeakEasy Shh </span>
       </div>
      {/* Grid column Map */}
       <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
@@ -72,8 +72,6 @@ function Footer() {
   )
 }
 
-
-     
 //   <!-- Copyright -->
 //   <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
 //     © 2024 IRONMUSIC by Fajersztejn & Bravo Copyright:

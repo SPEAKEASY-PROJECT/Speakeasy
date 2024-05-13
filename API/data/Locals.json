@@ -1,0 +1,49 @@
+[
+    {
+        "name": "Noise",
+        "coverUrl": "https://res.cloudinary.com/tf-lab/image/upload/w_640,c_fill,q_auto,f_auto/restaurant/5d1805b9-a794-4655-a9dc-23903ebeeb66/a7ab18fc-e2af-46da-964d-1ccf0008fc0d.jpg",
+        "category": "Indie",
+        "capacity": 100,
+        "Kitchen": true,
+        "address": "Gran vía 45, 28046 Madrid",
+        "location": {
+        "type": "Point",
+        "coordinates": [-3.690210, 40.428210]
+        }
+    },
+    {
+        "name": "Ramones & Others",
+        "coverUrl": "https://res.cloudinary.com/tf-lab/image/upload/w_640,c_fill,q_auto,f_auto/restaurant/5d1805b9-a794-4655-a9dc-23903ebeeb66/a7ab18fc-e2af-46da-964d-1ccf0008fc0d.jpg",
+        "category": "Rock",
+        "capacity": 80,
+        "Kitchen": true,
+        "address": "Paseo de la Castellana, 15, 28046 Madrid",
+        "location": {
+            "type": "Point",
+            "coordinates": [-3.690210, 40.428210]
+        }
+    },  {
+        "name": "Electro",
+        "coverUrl": "https://res.cloudinary.com/tf-lab/image/upload/w_640,c_fill,q_auto,f_auto/restaurant/5d1805b9-a794-4655-a9dc-23903ebeeb66/a7ab18fc-e2af-46da-964d-1ccf0008fc0d.jpg",
+        "category": "Dance",
+        "capacity": 80,
+        "Kitchen": true,
+        "address": "las Rozas 28, 28646 Madrid",
+        "location": {
+        "type": "Point",
+        "coordinates": [-3.690210, 40.428210]
+        }
+    },
+    {
+        "name": "Sweet Music 80",
+        "coverUrl": "https://res.cloudinary.com/tf-lab/image/upload/w_640,c_fill,q_auto,f_auto/restaurant/5d1805b9-a794-4655-a9dc-23903ebeeb66/a7ab18fc-e2af-46da-964d-1ccf0008fc0d.jpg",
+        "category": "Pop",
+        "capacity": 50,
+        "Kitchen": false,
+        "address": "Mostoles 45, 28046 Madrid",
+        "location": {
+        "type": "Point",
+        "coordinates": [-3.690210, 40.428210]
+        }
+    }
+]

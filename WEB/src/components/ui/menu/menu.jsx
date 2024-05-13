@@ -17,24 +17,24 @@ function Menu() {
             clearTimeout(interval)
         }
     },[])*/
-  return (
-    <div className='menu'>
-        <img className="logo" src="../../../../images/logoSpeak.png" alt="logo" />
-        <button id="abrir" className="open"><i className="bi bi-list"></i></button>
-        <div className={`open ${toggle ? 'visible' : ''}`} id='ul-list'>
-            <button className="cerrar" onClick={handleToogle} id="cerrar"><i className="bi bi-x-lg">Adios</i></button>
+    return (
+        <div className='menu'>
+            <img className="logo" src="../../../../images/logoSpeak.png" alt="logo" />
+            <button id="open" className="open">Abrir</button>
+            <div className={`open ${toggle ? '.nav.visible' : ''}`}>
+                <button className="close" onClick={handleToogle} id="close">Adios</button>
+            </div>
+            <nav className='menuNav'>
+                <ul className="list">
+                    <li><a href="/home">Home</a></li>
+                    <li><a href="/playlist">Playlist</a></li>
+                    <li><a href="/locals">Locales</a></li>
+                    <li><a href="/events">Eventos</a></li>
+                    <li><a href="/comunity">Comunidad</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav className='menuNav'>
-            <ul className="list">
-                <li><a href="/home">Home</a></li>
-                <li><a href="/playlist">Playlist</a></li>
-                <li><a href="/locals">Locales</a></li>
-                <li><a href="/events">Eventos</a></li>
-                <li><a href="/comunity">Comunidad</a></li>
-            </ul>
-        </nav>
-    </div>
-  )
+    )
 }
 
 export default Menu;

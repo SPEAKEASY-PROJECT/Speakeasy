@@ -9,7 +9,7 @@
     padding: 0;
     width: 12vw;
     height: 90vh;
-    background-color: #000000d7;
+    background-color: #1a2424d7;
     margin-top: 2px;
     margin-left: 5px;
 
@@ -30,16 +30,17 @@
     color: #ffffff;
 }
 .open,
-.cerrar {
+.close {
     display: none;
 }
-.cerrar {
-    display: none;
-}
+
 .nav.visible {
     background-color: #000;
 }
-
+.bi bi-x-lg {
+    width: 50px;
+    font-size: 80px;
+}
 @media  screen and (max-width: 550px) {
 .open {
     display: block;
@@ -51,7 +52,7 @@
     margin-left: 100px;
     margin-top: 20px;
 }
-.cerrar {
+.close {
     display: block;
     border: 0;
     font-size: 1rem;
@@ -61,7 +62,7 @@
     margin-left: 5px;
 }
 
-.menu {
+.open {
     opacity: 0;
     visibility: visible;
     display: flex;
