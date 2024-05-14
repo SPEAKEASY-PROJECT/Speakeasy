@@ -43,7 +43,10 @@ function Register() {
     }
 
     return (
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <div className='register'>
+            <img id='gangster' src='https://res.cloudinary.com/dmzanxy93/image/upload/v1715415905/gansterDos_pdizyv.jpg' alt='ganter pidiendo contraseña' />
+
+        <form className='form' onSubmit={handleSubmit(onSubmit)}>
             {error && (
             <div className='alert-danger'>Error, no se ha podido acceder</div>
             )}
@@ -60,7 +63,7 @@ function Register() {
                 </label>
                 <input type='date' id='birthdate' className={`form-control ${errors.birthdate ? 'is-invalid' : ''}`} {...register('birthdate')} />
             </div>
-           
+    
             <div className='mb-3'>
                 <label htmlFor='username' className='form-label'>
                     Nombre de usuario
@@ -100,6 +103,7 @@ function Register() {
 
             <button type='submit' className='btn btn-success'>Registrarse</button>
         </form>
+        </div>
     )
 }
 

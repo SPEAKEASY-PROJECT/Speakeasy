@@ -1,10 +1,13 @@
 import './home.css';
+import BaseComponents from '../../components/ui/baseComponents/baseComponents';
+
 
 function Home() {
   return (
-    <div>
+    <>
+    <BaseComponents />
       
-    </div>
+    </>
   )
 }
 

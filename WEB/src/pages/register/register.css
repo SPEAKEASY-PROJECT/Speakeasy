@@ -1,0 +1,14 @@
+.register {
+    display: flex;
+    width: 100%;
+}
+#gangster {
+    width: 40%;
+    height: auto;
+    background-size: contain;
+    
+}
+.form {
+    width: 100%;
+    height: 100vh;
+}

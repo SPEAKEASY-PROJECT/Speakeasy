@@ -1,8 +1,11 @@
-import React from 'react'
+import './comunity.css';
+import BaseComponent from '../../components/ui/baseComponents/baseComponents'
 
 function Comunity() {
   return (
-    <div>comunity</div>
+    <>
+      <BaseComponent />
+    </>
   )
 }
 
