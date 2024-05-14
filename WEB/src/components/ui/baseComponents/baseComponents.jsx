@@ -2,9 +2,10 @@ import Navbar from "../navbar/navbar";
 import Menu from "../menu/menu";
 import Footer from "../footer/footer";
 
-function BaseComponents() {
+function BaseComponents({ backgroundImage }) {
+
     return (
-        <div>
+        <div className="components" style={{ backgroundImage: `${backgroundImage}` }} >
             <Navbar />
             <Menu />
             <Footer />
@@ -12,5 +13,11 @@ function BaseComponents() {
     );
 }
 
+BaseComponents.defaultProps = {
+    backgroundColor: 'blue'
+}
+
 export default BaseComponents;
+
+
 

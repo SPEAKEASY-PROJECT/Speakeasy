@@ -14,17 +14,17 @@ function Welcome() {
 // }  
 
 
-  return (
-    <div id="popUpsContainer">
-       <div className="popUp">
-           <div className="fondoPop">
-             <img src='https://res.cloudinary.com/dmzanxy93/image/upload/v1715415906/gansterUno_yybb5a.jpg' alt="ganster abriendo una puerta" />
-             <p className='textPop'>eh! ¿tienes edad para entrar aquí?</p>
-             <input className="age" id="age" type="number" name="edad" placeholder="escribe tu edad"></input>
-             <button className="bt bt-sm" type="button" ><a href="/register">Entrar</a></button>
-            </div>
-        </div>
-    </div>
+    return (
+      <div id="popUpsContainer">
+        <div className="popUp">
+            <div className="fondoPop">
+              <img src='https://res.cloudinary.com/dmzanxy93/image/upload/v1715415906/gansterUno_yybb5a.jpg' alt="ganster abriendo una puerta" />
+              <p className='textPop'>eh! ¿tienes edad para entrar aquí?</p>
+              <input className="age" id="age" type="number" name="age" placeholder="escribe tu edad"></input>
+              <button className="bt bt-sm" type="button" ><a href="/register">Entrar</a></button>
+              </div>
+          </div>
+      </div>
   )
 }
 
