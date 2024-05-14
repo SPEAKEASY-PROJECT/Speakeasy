@@ -48,7 +48,7 @@ export function getProfile() {
 
 
 export function getLocals() {
-    return http.get("/locals", { headers: { authorization: accessToken}})
+    return http.get("/locals", { headers: { authorization: accessToken }})
   }
 
 export function logout() {
