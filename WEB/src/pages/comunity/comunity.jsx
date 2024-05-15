@@ -1,12 +1,13 @@
 import './comunity.css';
-import BaseComponent from '../../components/ui/baseComponents/baseComponents'
+import BaseComponent from '../../components/ui/baseComponents/baseComponents';
+import backgroundImage from '../../../public/images/chatComunidad.jpg';
 
 function Comunity() {
   return (
     <>
-      <BaseComponent />
+      <BaseComponent backgroundImage={backgroundImage} />
     </>
   )
 }
 
-export default Comunity
+export default Comunity;

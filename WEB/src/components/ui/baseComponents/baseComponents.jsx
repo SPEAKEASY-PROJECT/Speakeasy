@@ -5,7 +5,7 @@ import Footer from "../footer/footer";
 function BaseComponents({ backgroundImage }) {
 
     return (
-        <div className="components" style={{ backgroundImage: `${backgroundImage}` }} >
+        <div className="components" style={{ backgroundImage: `url(${backgroundImage})`, backgroundSize: 'cover' }} >
             <Navbar />
             <Menu />
             <Footer />
@@ -13,9 +13,6 @@ function BaseComponents({ backgroundImage }) {
     );
 }
 
-BaseComponents.defaultProps = {
-    backgroundColor: 'blue'
-}
 
 export default BaseComponents;
 
