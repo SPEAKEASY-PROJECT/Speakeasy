@@ -32,20 +32,38 @@
   }
   .textPop {
     margin-left: -300px;
-    margin-top: 180px;
+    margin-top: 100px;
+    text-align: center;
+    justify-items: center;
+    font-size: 24px;
     width: 25%;
-    height: 10%;
+    height: 12%;
     background-color: #ffffff;
     border-radius: 100px;
-    padding: 5px;
-    
   }
-  #nextButton {
-    margin-top: 20px;
-    padding: 10px;
-    background-color: blueviolet;
+  .age {
+    width: 180px;
+    height: 60px;
+    font-size: 24px;
+    color: #ffffff;
+    margin-top: 400px;
+    margin-left: -40px;
+    background-color: rgb(0, 89, 255);
   }
-
+  .inputPop {
+    margin-left: -220px;
+    margin-top: 250px;
+    width: 15%;
+    height: 7%;
+    font-size: 24px;
+    background-color: #fff;
+  }
+.textComic {
+  text-align: center;
+  justify-content: center;
+  margin-top: 20px;
+  margin-left: 20px;
+}
 @keyframes emergente {
   100% {
       visibility: visible;

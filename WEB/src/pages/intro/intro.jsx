@@ -1,22 +1,27 @@
 import './intro.css';
-import BaseComponents from '../../components/ui/baseComponents/baseComponents';
-import backgroundImage from '../../../public/images/gansterDos.jpg'
+
 
 function Intro() {
   return (
-    <BaseComponents backgroundImage={backgroundImage} className='intro'>
+      
+    <div id='intro'>
+        <div className="popUp">
+            <div className="fondoPop">
+            <img src='https://res.cloudinary.com/dmzanxy93/image/upload/v1715415905/gansterDos_pdizyv.jpg' alt="Gangster abriendo una puerta" />
+      </div>
       <div className='button-container'>
         <button type='submit' className='btn btn-outline-secondary btn-lg'>
           <a href='/homeGuest'>Acceder como invitado</a>
         </button>
         <button type='submit' className='btn btn-outline-primary btn-lg'>
-          <a href='/login'>Acceder a mi perfil</a>
+          <a href='/login'>Ingresa con tu LOGIN</a>
         </button>
         <button type='submit' className='btn btn-warning btn-lg'>
           <a href='/register'>Registrarme</a>
         </button>
       </div>
-    </BaseComponents>
+    </div>
+    </div>
   );
 }
 

@@ -17,11 +17,9 @@ function App() {
   return (
 
       <main className="flex-shrink-0">
-        <audio controls>
-          <source src="https://p.scdn.co/mp3-preview/0cd36d02d2474520294b4f4247b9acc7c819b7d0?cid=494c14a0db014067b6acb90f953987b2" type="audio/mpeg"></source>
-        </audio>
+        
         <Routes>
-          <Route path="/welcome" element= {<Welcome />} />
+          <Route path="/" element= {<Welcome />} />
           <Route path="/intro" element={<Intro />} />
           <Route path="/homeGuest" element={<HomeGuest />} />
           <Route path="/home" element={<Home />} />

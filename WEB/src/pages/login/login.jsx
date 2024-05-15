@@ -3,8 +3,6 @@ import { useForm } from 'react-hook-form';
 import { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import AuthContext from '../../contexts/auth.context';
-import BaseComponents from '../../components/ui/baseComponents/baseComponents';
-import backgroundImage from '../../../public/images/login.jpg'
 
 function Login() {
     const navigate = useNavigate();
@@ -29,8 +27,7 @@ function Login() {
     }
 
     return (
-
-        <BaseComponents backgroundImage={backgroundImage} className='login'>
+        <div className='login'>
             <div className="form-container">
                 <form onSubmit={handleSubmit(onSubmit)}>
                     {error && (
@@ -38,7 +35,6 @@ function Login() {
                             Error, no se ha podido acceder.
                         </div>
                     )}
-                    
                     <div className='mb-3'>
                         <label htmlFor='email' className='form-label'>
                             Email
@@ -46,7 +42,6 @@ function Login() {
                         <input type='email' id='email' className={`form-control ${errors.email ? 'is-invalid' : ''}`} {...register('email', { required: true })} />
                         {errors.email && <div className="invalid-feedback">El email es obligatorio</div>}
                     </div>
-
                     <div className='mb-3'>
                         <label htmlFor='password' className='form-label'>
                             Contraseña
@@ -54,11 +49,10 @@ function Login() {
                         <input type='password' id='password' className={`form-control ${errors.password ? 'is-invalid' : ''}`} {...register('password', { required: true })} />
                         {errors.password && <div className="invalid-feedback">La contraseña es obligatoria</div>}
                     </div>
-
                     <button type='submit' className='btn btn-success'>Acceder</button>
                 </form>
             </div>
-    </BaseComponents>
+        </div>
     );
 }
 

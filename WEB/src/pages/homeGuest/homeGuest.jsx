@@ -1,6 +1,6 @@
 import './homeGuest.css';
 import BaseComponents from '../../components/ui/baseComponents/baseComponents';
-import backgroundImage from '../../../public/images/fondoHall.jpg';
+import backgroundImage from '/images/fondoHall.jpg';
 
 
 function HomeGuest() {

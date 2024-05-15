@@ -27,10 +27,10 @@ router.patch('/users/:id', auth.checkAuth, users.update);
 router.delete('/users/:id', auth.checkAuth, users.delete);
 
 //SPOTY API
-//router.get('/albums', playlist.listAlbum);
-// router.get('/artist-search', playlist.listArtist);
+router.get('/albums', playlist.listAlbum);
+router.get('/artist-search', playlist.listArtist);
 router.get('/albums/:id', playlist.getAlbums);
-router.get('/tracks', playlist.getTracks)
+// router.get('/tracks', playlist.getTracks)
 // router.get('/tracks/:id', playlist.listTrack);
 
 module.exports = router;
