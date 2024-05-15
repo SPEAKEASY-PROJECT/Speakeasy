@@ -5,16 +5,19 @@
   background-image: url('https://res.cloudinary.com/dmzanxy93/image/upload/v1715415924/fondoIntroSpeack_-_copia_yllzgc.png');
   background-size: cover;
 }
-.form-container {
+.form-container1 {
     width: 40%;
-    height: 40%;
-    background: rgba(255, 255, 255, 0.8);
+    height: 35%;
+    background: rgba(58, 45, 40, 0.8);
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-top: 300px;
-    margin-left: 800px;
+    box-shadow: 0 0 10px rgb(243, 174, 174);
+    margin-top: 250px;
+    margin-left: 550px;
 }
+  .form-label {
+    color: white ;
+  }
   
   .form-control {
     margin-bottom: 20px;

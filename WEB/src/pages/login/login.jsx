@@ -28,7 +28,7 @@ function Login() {
 
     return (
         <div className='login'>
-            <div className="form-container">
+            <div className="form-container1">
                 <form onSubmit={handleSubmit(onSubmit)}>
                     {error && (
                         <div className='alert alert-danger'>
@@ -36,20 +36,20 @@ function Login() {
                         </div>
                     )}
                     <div className='mb-3'>
-                        <label htmlFor='email' className='form-label'>
-                            Email
+                        <label htmlFor='email' className='form-label fw-bold'>
+                            Email *
                         </label>
                         <input type='email' id='email' className={`form-control ${errors.email ? 'is-invalid' : ''}`} {...register('email', { required: true })} />
                         {errors.email && <div className="invalid-feedback">El email es obligatorio</div>}
                     </div>
                     <div className='mb-3'>
-                        <label htmlFor='password' className='form-label'>
-                            Contraseña
+                        <label htmlFor='password' className='form-label fw-bold'>
+                            Contraseña *
                         </label>
                         <input type='password' id='password' className={`form-control ${errors.password ? 'is-invalid' : ''}`} {...register('password', { required: true })} />
                         {errors.password && <div className="invalid-feedback">La contraseña es obligatoria</div>}
                     </div>
-                    <button type='submit' className='btn btn-success'>Acceder</button>
+                    <button type='submit' className='btn btn-warning'>Acceder</button>
                 </form>
             </div>
         </div>

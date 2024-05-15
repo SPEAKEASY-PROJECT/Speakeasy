@@ -1,14 +1,47 @@
+
+/* .text {
+    display: flex;
+    width: 40%;
+      height: 72%;
+} */
+
 .register {
     display: flex;
     width: 100%;
-}
+    height: 100vh;
+    background-image: url('https://res.cloudinary.com/dmzanxy93/image/upload/v1715619763/_24c38302-8d1a-4642-983c-7a96802fb1f0_utombz.jpg');
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-color: rgba(9, 6, 43, 0.884);
+  }
+  .form-container {
+      width: 40%;
+      height: 72%;
+      background: rgb(85, 85, 102);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 10px rgba(241, 226, 226, 0.678);
+      margin-top: 100px;
+      margin-left: 1090px;
+  }
+    
+    .form-control {
+      margin-bottom: 20px;
+    }
+    
+    .btn {
+      width: 100%;
+    }
+    
+    .mb-3 {
+
+    }
+
+
+    /* 
 #gangster {
     width: 40%;
     height: auto;
     background-size: contain;
     
-}
-.form {
-    width: 100%;
-    height: 100vh;
-}
+} */

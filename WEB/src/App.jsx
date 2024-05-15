@@ -19,7 +19,7 @@ function App() {
       <main className="flex-shrink-0">
         
         <Routes>
-          <Route path="/" element= {<Welcome />} />
+          <Route path="/welcome" element= {<Welcome />} />
           <Route path="/intro" element={<Intro />} />
           <Route path="/homeGuest" element={<HomeGuest />} />
           <Route path="/home" element={<Home />} />
