@@ -1,0 +1,19 @@
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    
+  }
+  
+  button a {
+    color: inherit; /* para mantener el color del texto del botón */
+    text-decoration: none; /* para quitar el subrayado */
+  }
+  
+  button {
+    width: 200px; /* Ajusta según sea necesario */
+  }
+  

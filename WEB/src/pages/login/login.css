@@ -1,0 +1,26 @@
+/* login.css */
+
+.intro {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .form-container {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-control {
+    margin-bottom: 10px;
+  }
+  
+  .btn {
+    width: 100%;
+  }
+  

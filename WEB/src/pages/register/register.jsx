@@ -43,9 +43,7 @@ function Register() {
     }
 
     return (
-        <div className='register'>
-            <img id='gangster' src='https://res.cloudinary.com/dmzanxy93/image/upload/v1715415905/gansterDos_pdizyv.jpg' alt='ganter pidiendo contraseña' />
-
+       
         <form className='form' onSubmit={handleSubmit(onSubmit)}>
             {error && (
             <div className='alert-danger'>Error, no se ha podido acceder</div>
@@ -103,7 +101,7 @@ function Register() {
 
             <button type='submit' className='btn btn-success'>Registrarse</button>
         </form>
-        </div>
+        
     )
 }
 

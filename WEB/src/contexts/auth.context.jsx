@@ -9,7 +9,7 @@ export function AuthContextProvider({ children }) {
     const [user, setUser] = useState(null);
     const navigate = useNavigate();
     
-
+    
     async function fetchProfile() {
         const response = await getProfile();
         setUser(response.data);
