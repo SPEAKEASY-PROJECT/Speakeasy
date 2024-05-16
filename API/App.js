@@ -9,6 +9,8 @@ const cors = require("./middlewares/cors.middleware");
 
 const app = express();
 
+//SPOTY
+require("./configs/spotify.config");
 
 //Middlewares
 app.use(logger('dev'));

@@ -22,4 +22,8 @@
     font-weight: 400;
     font-size: 14px;
 }
-
+.timer{
+    width: 200px;
+    height: 40px;
+    background-color: rgb(216, 222, 135);
+}

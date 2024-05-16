@@ -1,5 +1,4 @@
-
-
+import './locals.css';
 
 
 function Locals() {

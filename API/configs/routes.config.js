@@ -28,7 +28,7 @@ router.delete('/users/:id', auth.checkAuth, users.delete);
 
 //SPOTY API
 router.get('/albums', playlist.listAlbum);
-router.get('/artist-search', playlist.listArtist);
+router.get('/artist-search', playlist.searchArtists);
 router.get('/albums/:id', playlist.getAlbums);
 // router.get('/tracks', playlist.getTracks)
 // router.get('/tracks/:id', playlist.listTrack);

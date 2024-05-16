@@ -1,7 +1,7 @@
 import './playlist.css';
 // import playlist from '../../../../API/controllers/spotify.controller';
 import BaseComponent from '../../components/ui/baseComponents/baseComponents';
-import backgroundImage from '../../../public/images/fondoHall.jpg';
+import backgroundImage from '/images/playlist.jpg';
 
 function Playlist() {
   return (

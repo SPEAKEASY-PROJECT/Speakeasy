@@ -46,7 +46,7 @@ module.exports.listTrack = (req, res, next) => {
 
     // encontrar al artista
 
-module.exports.listArtist = (req, res, next) => {
+module.exports.searchArtists = (req, res, next) => {
     const artist = req.query.search;
 
     if (!artist) res.redirect('/');

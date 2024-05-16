@@ -2,35 +2,39 @@ import './App.css';
 import { Route, Routes } from "react-router-dom";
 import Welcome from './pages/welcome/welcome';
 import Intro from './pages/intro/intro';
-import HomeGuest from './pages/homeGuest/homeGuest';
 import Home from './pages/home/home';
 import Login from './pages/login/login';
 import Register from './pages/register/register';
 import Playlist from './pages/playlist/playlist';
 import Locals from './pages/locals/locals';
 import Comunity from './pages/comunity/comunity';
+import { useState } from 'react';
 // import Functional from './components/functional/functional';
 //import BaseComponents from './components/ui/baseComponents/baseComponents';
+import Timer from './components/timer/timer';
+
 
 function App() {
-
+  
+  
+  
   return (
 
-      <main className="flex-shrink-0">
+    <main className="flex-shrink-0">
+      
+      <Routes>
+        <Route path="/welcome" element= {<Welcome />} />
+        <Route path="/intro" element={<Intro />} />
         
-        <Routes>
-          <Route path="/welcome" element= {<Welcome />} />
-          <Route path="/intro" element={<Intro />} />
-          <Route path="/homeGuest" element={<HomeGuest />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element= {<Register />} />
-          <Route path="/playlist" element={<Playlist />} />
-          <Route path="/locals" element={<Locals />} />
-          <Route path="/comunity" element={<Comunity />} />
-        </Routes> 
-      </main>
-  );
+        <Route path="/home" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element= {<Register />} />
+        <Route path="/playlist" element={<Playlist />} />
+        <Route path="/locals" element={<Locals />} />
+        <Route path="/comunity" element={<Comunity />} />
+      </Routes> 
+    </main>
+);
 }
 
 export default App;
