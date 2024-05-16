@@ -2,7 +2,7 @@
 // import { useForm } from 'react-hook-form';
 // import { useEffect, useState, useRef } from 'react';
 // import { useNavigate } from 'react-router-dom';
-// import { updateUser, getUserById } from '../../services/api.service';
+// // import { updateUser, getUserById } from '../../services/api.service';
 
 
 // function Profile({ userId }) { // Asegúrate de pasar el userId como prop

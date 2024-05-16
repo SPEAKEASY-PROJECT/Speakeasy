@@ -1,8 +1,8 @@
 import ('./menu.css')
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function Menu() {
-
     const [toggle, setToggle] = useState(false);
     //const [api, setApi] = useState()
 
@@ -26,11 +26,11 @@ function Menu() {
             </div>
             <nav className='menuNav'>
                 <ul className="list">
-                    <li><a href="/home">Home</a></li>
-                    <li><a href="/playlist">Playlist</a></li>
-                    <li><a href="/locals">Locales</a></li>
-                    <li><a href="/events">Eventos</a></li>
-                    <li><a href="/comunity">Comunidad</a></li>
+                    <li><Link to="/home">Home</Link></li>
+                    <li><Link to="/playlist">Playlist</Link></li>
+                    <li><Link to="/locals">Locales</Link></li>
+                    <li><Link to="/events">Eventos</Link></li>
+                    <li><Link to="/comunity">Comunidad</Link></li>
                 </ul>
             </nav>
         </div>

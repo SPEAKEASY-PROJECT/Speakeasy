@@ -1,15 +1,15 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-//import AuthContext from "../../contexts/auth.context";
+import AuthContext from "../../contexts/auth.context";
 
 function Timer() {
     const [timeLeft, setTimeLeft] = useState(10); // 20 minutos en segundos son 1200
     const navigate = useNavigate();
-    // const { user } = useContext(AuthContext);
+    const { user } = useContext(AuthContext);
     
 
     useEffect(() => {
-        // if (!user) {
+        if (!user) {
         const intervalId = setInterval(() => {
             setTimeLeft(prevTime => {
                 if (prevTime <= 1) {
@@ -22,9 +22,8 @@ function Timer() {
         }, 1000);
 
         return () => clearInterval(intervalId);
-        // }
-    // }, [navigate, user]);
-}, [navigate]);
+        }
+    }, [navigate, user]);
 
     const formatTime = (seconds) => {
         const minutes = Math.floor(seconds / 60);
@@ -32,9 +31,10 @@ function Timer() {
         return `${minutes.toString().padStart(2, '0')}:${remainingSeconds.toString().padStart(2, '0')}`;
     };
 
-    // if (user) {
-    //     return null;
-    // }
+    if (user) {
+        return null;
+        // <div className={`timer-container ${user ? 'hidden' : ''}`}>
+    }
 
     return <div><p className="numbers">{formatTime(timeLeft)}</p></div>;
 }

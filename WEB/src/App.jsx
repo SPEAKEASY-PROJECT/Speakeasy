@@ -7,17 +7,11 @@ import Login from './pages/login/login';
 import Register from './pages/register/register';
 import Playlist from './pages/playlist/playlist';
 import Locals from './pages/locals/locals';
-import Events from './pages/events/events';
 import Comunity from './pages/comunity/comunity';
 import Events from './pages/events/events';
-// import Functional from './components/functional/functional';
-//import BaseComponents from './components/ui/baseComponents/baseComponents';
 
 
 function App() {
-  
-  
-  
   return (
 
     <main className="flex-shrink-0">
@@ -25,7 +19,6 @@ function App() {
       <Routes>
         <Route path="/" element= {<Welcome />} />
         <Route path="/intro" element={<Intro />} />
-        <Route path="/events" element={<Events />} />
         <Route path="/home" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element= {<Register />} />

@@ -45,16 +45,11 @@ function Welcome() {
 
 export default Welcome;
 
-
-<<<<<<< HEAD
-=======
-
-
-  
-
   
 
   
 
 
->>>>>>> 4f5db073c56ba3f8c65812dd516629c751f4e795
+
+
+

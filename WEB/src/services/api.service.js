@@ -1,13 +1,26 @@
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const http = axios.create({
     baseURL: 'http://localhost:3000/api/v1',
 });
 
+// http.interceptors.request.use(function (config) {
+//   config.headers.authorization = `BEARER ${localStorage.getItem("token")}`;
+//   return config;
+// });
+
 http.interceptors.request.use(function (config) {
-  config.headers.authorization = `BEARER ${localStorage.getItem("token")}`;
+  const token = localStorage.getItem("token");
+  if (token) {
+      config.headers.authorization = `BEARER ${token}`;
+  }
   return config;
 });
+
+
+
+
 
 // Add a response interceptor
 http.interceptors.response.use(
@@ -16,14 +29,25 @@ http.interceptors.response.use(
   },
 
   function (error) {
+    const navigate = useNavigate(); 
     if (
       error.response.status === 401 &&
       location.pathname !== "/login" &&
-      location.pathname !== "/register"
+      location.pathname !== "/register" && 
+      location.pathname !== '/' &&
+      location.pathname !== "/intro" &&
+      location.pathname !== '/home'
     ) {
+
       // navigate refreshing page
+      // localStorage.removeItem("token");
+      // window.location.replace("/login");
+
       localStorage.removeItem("token");
-      window.location.replace("/login");
+      navigate("/login");
+
+
+
     }
     return Promise.reject(error);
   }
@@ -46,10 +70,19 @@ export function getProfile() {
     return http.get('/profile');
   }
 
+// export function getLocals() {
+//     return http.get("/locals", { headers: { authorization: accessToken }})
+//   }
 
 export function getLocals() {
-    return http.get("/locals", { headers: { authorization: accessToken }})
+  const accessToken = localStorage.getItem("token");
+  if (!accessToken) {
+      return Promise.reject(new Error("No access token available"));
   }
+  return http.get("/locals", { headers: { authorization: `BEARER ${accessToken}` }});
+}
+
+
 
 export function logout() {
   localStorage.removeItem("token");
