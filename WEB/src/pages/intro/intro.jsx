@@ -19,7 +19,7 @@ function Intro() {
       </div>
       <div className='button-container'>
         <button type='submit' className='btn btn-outline-secondary btn-lg'>
-          <a href='/homeGuest'>Acceder como invitado</a>
+          <a href='/home'>Acceder como invitado</a>
         </button>
         <button type='submit' className='btn btn-outline-primary btn-lg'>
           <a href='/login'>Acceder a mi usuario</a>
