@@ -1,6 +1,6 @@
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import AuthContext from "../../contexts/auth.context";
+//import AuthContext from "../../contexts/auth.context";
 
 function Timer() {
     const [timeLeft, setTimeLeft] = useState(10); // 20 minutos en segundos son 1200

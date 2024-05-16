@@ -15,23 +15,22 @@ function Intro() {
               Bienvenido, elige como quieres acceder:
           </p>
           <p className='texto fs-3'>
-              Entrando como invitado puedes disfrutar de 20 minutos para recorrer algunas de las funcionalidades de la web, sin embargo te invitamos a que te registres para descubrir al 100% SpeakEasy, y recuerda que 
-              necesitaras tu "password" secreto para ingresar a tu local favorito . . . Shh!
+              Entrando como invitado puedes disfrutar de 20 minutos para recorrer algunas de las funcionalidades de la web, sin embargo te invitamos a que te registres para descubrir al 100% SpeakEasy, y recuerda, mas adelante necesitaras tu password secreto para acceder a tu local favorito . . . Shh!
           </p>
         </div>
-        <div className='button-container'>
-          <button type='submit' className='btn btn-outline-secondary btn-lg'>
-            <a href='/home'>Acceder como invitado</a>
-          </button>
-          <button type='submit' className='btn btn-outline-primary btn-lg'>
-            <a href='/login'>Acceder a mi usuario</a>
-          </button>
-          <button type='submit' className='btn btn-warning btn-lg'>
-            <a href='/register'>Registrarme</a>
-          </button>
-         </div>
-        </div>
+      <div className='button-container'>
+        <button type='submit' className='btn btn-outline-secondary btn-lg'>
+          <a href='/home'>Acceder como invitado</a>
+        </button>
+        <button type='submit' className='btn btn-outline-primary btn-lg'>
+          <a href='/login'>Acceder a mi usuario</a>
+        </button>
+        <button type='submit' className='btn btn-warning btn-lg'>
+          <a href='/register'>Registrarme</a>
+        </button>
       </div>
+      </div>
+    </div>
     </div>
   );
 }
