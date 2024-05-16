@@ -4,7 +4,7 @@ import { useContext, useState } from "react";
 import AuthContext from "../../../contexts/auth.context";
 import Timer from '../../timer/timer';
 
-// import { Logo } from "../../../../public/images/logo.jpg";
+
 // const renderNavLinkActive = ({ isActive }) => isActive ? 'nav-link active' : 'nav-link';
 
 function Navbar() {

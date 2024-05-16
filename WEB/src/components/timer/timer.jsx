@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import AuthContext from "../../contexts/auth.context";
 
 function Timer() {
-    const [timeLeft, setTimeLeft] = useState(30); // 20 minutos en segundos son 1200
+    const [timeLeft, setTimeLeft] = useState(10); // 20 minutos en segundos son 1200
     const navigate = useNavigate();
     // const { user } = useContext(AuthContext);
     
@@ -14,7 +14,7 @@ function Timer() {
             setTimeLeft(prevTime => {
                 if (prevTime <= 1) {
                     clearInterval(intervalId);
-                    navigate("/intro");
+                    navigate("/");
                     return 0;
                 }
                 return prevTime - 1;
@@ -36,7 +36,7 @@ function Timer() {
     //     return null;
     // }
 
-    return <div>{formatTime(timeLeft)}</div>;
+    return <div><p className="numbers">{formatTime(timeLeft)}</p></div>;
 }
 
 export default Timer;
