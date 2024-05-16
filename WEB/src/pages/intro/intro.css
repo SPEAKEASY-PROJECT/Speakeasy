@@ -13,15 +13,22 @@
 }
 .button-container {
     display: flex;
-    width: 560px;
+    width: 400px;
     height: 150px;
     flex-direction: column;
     gap: 50px;
     align-items: center;
-    margin-top: 400px;
-    margin-right: 200px;
+    margin-top: 80px;
+    margin-left: 80px;
   }
-  .popUp {
+
+.textIntro {
+  width: 500px;
+  height: auto;
+  margin-left: 60px;
+}
+
+.popUp {
     display: flex;
     font-family: 'Bangers', cursive;
     width: 100%;
@@ -38,5 +45,5 @@
   
   button {
     width: 00px; /* Ajusta según sea necesario */
-  }
-  
+  } 
+ 
