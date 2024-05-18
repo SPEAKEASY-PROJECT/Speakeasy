@@ -4,9 +4,7 @@ import AuthContext from "../../../contexts/auth.context";
 import Timer from '../../timer/timer';
 
 function Navbar() {
-const context = useContext(AuthContext);
-
-const [showTimer, setShowTimer] = useState(false);
+const { user, doLogout } = useContext(AuthContext);
 
 return (
     
@@ -14,15 +12,14 @@ return (
     <nav className="main-navbar navbar-expand-lg ">
       <ul className="nav-container">
         {/* <li>Ubicación:{context.user?.</li> */}
-        <li>¿Cómo estás? {context.user?.name}</li>
-        <li>{context.user && (
-              <button onClick={context.doLogout} className="btn btn-sm btn-danger btn-color">Cerrar sesión</button>
+        <li>¿Cómo estás? {user?.name}</li>
+        <li>{user && (
+              <button onClick={doLogout} className="btn btn-sm btn-danger btn-color">Cerrar sesión</button>
             )}
         </li>
       </ul>
-      <div>{showTimer && <Timer />} 
-        <button className='timer' onClick={() => {setShowTimer(!showTimer);
-          }}> <p>Tiempo restante</p></button>
+      <div>{!user && <Timer />} 
+        
       </div>
     </nav>
     

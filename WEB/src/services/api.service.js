@@ -53,6 +53,9 @@ http.interceptors.response.use(
   }
 );
 
+export function updateUser() {
+  return true
+}
 
 export function createUser(data) {
     return http.post("/users", data);
@@ -86,4 +89,8 @@ export function getLocals() {
 
 export function logout() {
   localStorage.removeItem("token");
+}
+
+export function getArtists(search) {
+  return http.get(`/artist-search?search=${search}`)
 }

@@ -9,6 +9,7 @@ import Playlist from './pages/playlist/playlist';
 import Locals from './pages/locals/locals';
 import Comunity from './pages/comunity/comunity';
 import Events from './pages/events/events';
+import Profile from './pages/profile/profile';
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
         <Route path="/locals" element={<Locals />} />
         <Route path="/comunity" element={<Comunity />} />
         <Route path="/events" element={<Events />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes> 
     </main>
 );

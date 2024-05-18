@@ -1,36 +1,40 @@
 import './profile.css'; 
 import { useForm } from 'react-hook-form';
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { getProfile, updateUser, getUserById } from '../../services/api.service';
+import AuthContext from '../../contexts/auth.context';
+//import { updateUser } from '../../services/api.service';
 
 
-function getProfile({ userId }) { // Asegúrate de pasar el userId como prop
+function Profile() { // Asegúrate de pasar el userId como prop
   const navigate = useNavigate();
   const latitude = useRef(0);
   const longitude = useRef(0);
+  const { user } = useContext(AuthContext);
+
+  console.info({ user })
 
 
   const {
-    profile,
+    register,
     handleSubmit,
     formState: { errors }
 } = useForm();
   const [error, setError] = useState();
-  const [userData, setUserData] = useState(null); // Estado para almacenar los datos del usuario
+  //const [userData, setUserData] = useState(null); // Estado para almacenar los datos del usuario
 
 useEffect(() => {
   // Obtener los datos del usuario al cargar el componente
   async function fetchUserData() {
       try {
-          const user = await getUserById(userId);
-          setUserData(user);
+          //const user = await getProfile();
+          //setUserData(user);
       } catch (error) {
           console.error('Error al obtener los datos del usuario:', error);
       }
   }
   fetchUserData();
-}, [userId]);
+}, []);
 
 
 useEffect(() => {
@@ -44,14 +48,14 @@ async function onSubmit(data) {
   try {
       setError(false);
 
-      await updateUser(userId, {
+      /*await updateUser(userId, {
           ...userData, // Mantener los datos del usuario que no se modifican
           ...data, // Sobrescribir los datos que se modificaron en el formulario
           location: {
               type: 'Point',
               coordinates: [latitude.current, longitude.current],
           },
-      });
+      });*/
 
       navigate('/login');
   } catch (err) {
@@ -65,13 +69,13 @@ return (
           <div className='alert-danger'>Error, no se ha podido acceder</div>
       )}
       {/* Renderizar los campos de formulario con los datos del usuario */}
-      {userData && (
+      {user && (
           <>
               <div className='mb-3'>
                   <label htmlFor='name' className='form-label'>
                       Nombre
                   </label>
-                  <input type='text' id='name' className={`form-control ${errors.name ? 'is-invalid' : ''}`} {...register('name', { value: userData.name })} />
+                  <input type='text' id='name' className={`form-control ${errors.name ? 'is-invalid' : ''}`} {...register('name', { value: user?.name })} />
               </div>
               {/* Renderizar otros campos del formulario con los datos del usuario */}
           </>
@@ -81,4 +85,4 @@ return (
 );
 }
 
-export default getProfile;
+export default Profile;

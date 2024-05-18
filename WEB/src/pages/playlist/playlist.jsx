@@ -4,19 +4,27 @@ import backgroundImage from '/images/playlist.jpg';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import { getArtists } from '../../services/api.service';
 
 
 
 function Playlist() {
 
   const [search, setSearch] = useState('');
+  const [artists, setArtists ] = useState([])
   const navigate = useNavigate();
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     if (search.trim()) {
       // Navega a la ruta /artist-search con el parámetro de búsqueda
-      navigate(`/artist-search?search=${encodeURIComponent(search)}`);
+      //navigate(`/artist-search?search=${encodeURIComponent(search)}`);
+      try {
+        const { data } = await getArtists(search);
+        setArtists(data)
+      } catch(error){
+        console.error(error)
+      }
     }
   };
 
@@ -46,9 +54,9 @@ function Playlist() {
       <button type='submit' className='btn btn-primary'>Selecciona un artista</button>
     </form> 
       
-    {/* <div className="container py-4">
+    <div className="container py-4">
       <div className="row row-cols-1 row-cols-md-2 g-4 gap-4">
-        {artists && artists.map((artist) => (
+        {artists && artists?.map((artist) => (
           <div className="card" style={{ width: '18rem' }} key={artist.id}>
             <img src={artist.images[0]?.url} className="card-img-top" alt="Imágenes de Álbumes" />
             <div className="card-body">
@@ -58,7 +66,8 @@ function Playlist() {
           </div>
         ))}
       </div>
-    </div> */}
+    </div>
+    
     </BaseComponent>
 
     </>

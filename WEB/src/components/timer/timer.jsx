@@ -32,12 +32,12 @@ function Timer() {
     };
 
     if (user) {
-        return null;
-        // <div className={`timer-container ${user ? 'hidden' : ''}`}>
+        return;
+       
     }
 
-    //return <div><p className="numbers">{formatTime(timeLeft)}</p></div>;
-    // return <div className={`timer ${user ? 'hidden' : ''}`}><p className="numbers">{formatTime(timeLeft)}</p></div>;
+    return <div><p className="numbers">{formatTime(timeLeft)}</p></div>;
+   
 }
 
 export default Timer;
