@@ -16,9 +16,7 @@ function BaseComponents({ backgroundImage, children, className }) {
     );
 }
 
-BaseComponents.defaultProps = {
-    backgroundColor: 'blue'
-}
+
 export default BaseComponents;
 
 

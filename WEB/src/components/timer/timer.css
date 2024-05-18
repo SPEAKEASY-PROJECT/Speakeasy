@@ -1,4 +1,18 @@
 
+.timer{
+    width: 200px;
+    height: 40px;
+    font-size: 20px;
+    color: #ffffff;
+    background-color:rgb(246, 148, 20);
+    border: none;
+}
 .hidden {
     display: none;
+}
+.numbers{
+    color: #ffffff;
+    font-size: 30px;
+    margin-top: 50px;
+    margin-left: 70px;
 }

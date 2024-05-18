@@ -36,7 +36,8 @@ function Timer() {
         // <div className={`timer-container ${user ? 'hidden' : ''}`}>
     }
 
-    return <div><p className="numbers">{formatTime(timeLeft)}</p></div>;
+    //return <div><p className="numbers">{formatTime(timeLeft)}</p></div>;
+    // return <div className={`timer ${user ? 'hidden' : ''}`}><p className="numbers">{formatTime(timeLeft)}</p></div>;
 }
 
 export default Timer;

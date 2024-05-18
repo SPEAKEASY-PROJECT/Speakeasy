@@ -1,5 +1,6 @@
 import './locals.css';
-
+import { useState, useEffect } from 'react';
+import { getLocals } from '../../services/api.service';
 
 function Locals() {
     const [locals, setLocals] = useState(null)
