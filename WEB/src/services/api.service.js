@@ -64,10 +64,12 @@ export function getProfile() {
     return http.get('/profile');
   }
 
-// export function getLocals() {
-//     return http.get("/locals", { headers: { authorization: accessToken }})
-//   }
+export function logout() {
+  localStorage.removeItem("token");
+}
 
+
+//LOCALES
 export function getLocals() {
   const accessToken = localStorage.getItem("token");
   if (!accessToken) {
@@ -76,11 +78,17 @@ export function getLocals() {
   return http.get("/locals", { headers: { authorization: `BEARER ${accessToken}` }});
 }
 
-
-export function logout() {
-  localStorage.removeItem("token");
+export function getListLocals() {
+  return http.get('/locals');
 }
 
+export function getSelectedLocal(id) {
+  return http.get(`/locals/${id}`);
+}
+
+
+
+//PLAYLIST
 export function getArtists(search) {
   return http.get(`/artist-search?search=${search}`);
 }
