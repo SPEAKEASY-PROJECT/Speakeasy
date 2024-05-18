@@ -20,8 +20,6 @@ http.interceptors.request.use(function (config) {
 
 
 
-
-
 // Add a response interceptor
 http.interceptors.response.use(
   function (response) {
@@ -39,15 +37,8 @@ http.interceptors.response.use(
       location.pathname !== '/home'
     ) {
 
-      // navigate refreshing page
-      // localStorage.removeItem("token");
-      // window.location.replace("/login");
-
       localStorage.removeItem("token");
       navigate("/login");
-
-
-
     }
     return Promise.reject(error);
   }
@@ -86,11 +77,18 @@ export function getLocals() {
 }
 
 
-
 export function logout() {
   localStorage.removeItem("token");
 }
 
 export function getArtists(search) {
-  return http.get(`/artist-search?search=${search}`)
+  return http.get(`/artist-search?search=${search}`);
+}
+
+export function getAlbumsArtist(id) {
+  return http.get(`/artists/${id}/albums`);
+}
+
+export function getListTracks(id) {
+  return http.get(`/albums/${id}/tracks`);
 }

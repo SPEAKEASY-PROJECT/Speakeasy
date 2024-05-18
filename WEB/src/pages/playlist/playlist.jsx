@@ -2,23 +2,19 @@ import './playlist.css';
 import BaseComponent from '../../components/ui/baseComponents/baseComponents';
 import backgroundImage from '/images/playlist.jpg';
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { Link } from 'react-router-dom';
-import { getArtists } from '../../services/api.service';
+import { getArtists, getAlbumsArtist, getListTracks} from '../../services/api.service';
 
 
 
 function Playlist() {
-
   const [search, setSearch] = useState('');
-  const [artists, setArtists ] = useState([])
-  const navigate = useNavigate();
+  const [artists, setArtists] = useState([])
+  const [albums, setAlbums] = useState([]);
+  const [tracks, setTracks] = useState([]);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     if (search.trim()) {
-      // Navega a la ruta /artist-search con el parámetro de búsqueda
-      //navigate(`/artist-search?search=${encodeURIComponent(search)}`);
       try {
         const { data } = await getArtists(search);
         setArtists(data)
@@ -28,50 +24,88 @@ function Playlist() {
     }
   };
 
+  const onClickArtist = async (id) => {
+    getAlbumsArtist(id)
+      .then(res => {
+        setArtists([])
+        setAlbums(res.data)
+      })
+  };
 
+  const onClickAlbums = async (id) => {
+    getListTracks(id)
+      .then(res => {
+        setAlbums([])
+        setTracks(res.data)
+      })
+  };
+  
 
   return (
     <>
       <BaseComponent backgroundImage={backgroundImage} >
 
-      {/* <div className="container py-4">
-        <div className="row row-cols-1 row-cols-md-2 g-4 gap-4">
-        <audio controls>
-          <source src="https://p.scdn.co/mp3-preview/0cd36d02d2474520294b4f4247b9acc7c819b7d0?cid=494c14a0db014067b6acb90f953987b2" type="audio/mpeg"></source>
-        </audio> */}
-
-
-<form onSubmit={handleSubmit} className='container py-3'>
-      <div className='mb-1'>
-        <input
-          type='text'
-          className='form-control'
-          name='search'
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-        />
-      </div>
-      <button type='submit' className='btn btn-primary'>Selecciona un artista</button>
-    </form> 
-      
-    <div className="container py-4">
-      <div className="row row-cols-1 row-cols-md-2 g-4 gap-4">
-        {artists && artists?.map((artist) => (
-          <div className="card" style={{ width: '18rem' }} key={artist.id}>
-            <img src={artist.images[0]?.url} className="card-img-top" alt="Imágenes de Álbumes" />
-            <div className="card-body">
-              <h5 className="card-title">{artist.name}</h5>
-              <Link to={`/albums/${artist.id}`} className="btn btn-primary">View Albums</Link>
-            </div>
+        <form onSubmit={handleSubmit} className='container py-3'>
+          <div className='mb-1'>
+            <input type='text' className='form-control' name='search' value={search} onChange={(e) => setSearch(e.target.value)} />
           </div>
-        ))}
-      </div>
-    </div>
+            <button type='submit' className='btn btn-primary'>Selecciona un artista</button>
+        </form> 
+      
+
+        <div className="container py-4">
+          <div className="row row-cols-1 row-cols-md-2 g-4 gap-4">
+            {artists && artists?.map((artist) => (
+              <div className="card" style={{ width: '18rem' }} key={artist.id}>
+                <img src={artist.images[0]?.url} className="card-img-top" alt="Imágenes de Álbumes" />
+                <div className="card-body">
+                  <h5 className="card-title">{artist.name}</h5>
+                  <button 
+                    className="btn btn-primary"
+                    onClick={() => {
+                      onClickArtist(artist.id)
+                    }}
+                  >Ver los álbumes</button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+
+        <div className="container py-4">
+          <div className="row row-cols-1 row-cols-md-2 g-4 gap-4">
+            {albums && albums?.map((album) => (
+              <div className="card" style={{ width: '18rem' }} key={album.id}>
+                <img src={album.images[0]?.url} className="card-img-top" alt="Imágenes de Canciones" />
+                <div className="card-body">
+                  <h5 className="card-title">{album.name}</h5>
+                  <button 
+                    className="btn btn-primary"
+                    onClick={() => {
+                      onClickAlbums(album.id)
+                    }}
+                  >Ver canciones</button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+
+        <ul className="list-group container py-4">
+          {tracks.map((track, index) => (
+            <li key={index} className="list-group-item d-flex">
+              <span className="me-auto">{track.name}</span>
+              <audio controls src={track.preview_url} className="me-auto"></audio>
+            </li>
+          ))}
+        </ul>
     
-    </BaseComponent>
+      </BaseComponent>
 
     </>
-  )
+  );
 }
 
 export default Playlist;

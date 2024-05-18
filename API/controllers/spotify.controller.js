@@ -1,6 +1,11 @@
 const spotifyApi = require('../configs/spotify.config');
 
 
+
+
+
+// haciendolo
+
 module.exports.getAlbums = (req, res, next) => {
     const { id } = req.params;
 
@@ -15,6 +20,8 @@ module.exports.getAlbums = (req, res, next) => {
         })
 }
 
+
+
 module.exports.getTracks = (req, res, next) => {
     const { track } = req.query;
 
@@ -26,7 +33,7 @@ module.exports.getTracks = (req, res, next) => {
         .catch(next)
 }
 
-
+//HECHOOOO
 module.exports.listTrack = (req, res, next) => {
     const { id } = req.params;
 
@@ -43,6 +50,9 @@ module.exports.listTrack = (req, res, next) => {
     }
 
 
+
+
+// HECHOOOOOOOOOOOOOOOOOOOOOOOOOOOO
 
 module.exports.searchArtists = (req, res, next) => {
     const artist = req.query.search;
@@ -62,6 +72,8 @@ module.exports.searchArtists = (req, res, next) => {
             next(err);
         })
 }
+
+// HECHOOOOOOOOOOOOOOOOOOOOOOOOOOOO
 
 module.exports.listAlbum = (req, res, next) => {
     res.json('misc/home');
