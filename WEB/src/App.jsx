@@ -7,7 +7,7 @@ import Login from './pages/login/login';
 import Register from './pages/register/register';
 import Playlist from './pages/playlist/playlist';
 import Locals from './pages/locals/locals';
-import SelectedLocal from './pages/locals/selected-local/SelectedLocal';
+import SelectedLocal from './pages/locals/selected-local/selectedLocal';
 import Comunity from './pages/comunity/comunity';
 import Events from './pages/events/events';
 import Profile from './pages/profile/profile';

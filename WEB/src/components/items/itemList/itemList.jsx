@@ -1,6 +1,6 @@
 import './itemList.css'
 import { useState } from 'react';
-import ItemSingle from '../item-single/itemSingle';
+import ItemSingle from '../itemSingle/itemSingle';
 import bebidasData from '../../../data/bebidas.json';
 
 
@@ -21,6 +21,7 @@ function ItemList() {
   }
 
   return (
+    
     <div className="row row-cols-4 g-2">
         {items.map((event) => (
           <div key={event.id} className="col">
