@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .text-location {
     color: #fff;
     font-size: 24px;
@@ -7,3 +8,14 @@
     background-color: #f4084b77;
     padding: 30px;
   }
+=======
+.text-location {
+  color: #fff;
+  font-size: 24px;
+  text-align: center;
+}
+.fondo-locals {
+  background-color: #f4084b77;
+  padding: 30px;
+}
+>>>>>>> f6595750769864f047985ae97da30863e6df82f4
