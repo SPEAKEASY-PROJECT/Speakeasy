@@ -3,6 +3,9 @@ import './events.css'
 import backgroundImage from '/images/eventos.jpg';
 import BaseComponents from '../../components/ui/baseComponents/baseComponents';
 
+
+
+
 function Events() {
     return (
         <>

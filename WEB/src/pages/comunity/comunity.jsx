@@ -3,7 +3,10 @@ import BaseComponent from '../../components/ui/baseComponents/baseComponents';
 import backgroundImage from '/images/chatComunidad.jpg';
 import Chat from '../../components/chat/chat';
 
+
 function Comunity() {
+
+
   return (
     <>
    <p>¡Únete a nuestra exclusiva comunidad y sumérgete en conversaciones animadas donde poder compartir

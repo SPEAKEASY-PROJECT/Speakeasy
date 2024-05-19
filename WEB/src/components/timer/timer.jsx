@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import AuthContext from "../../contexts/auth.context";
 
 function Timer() {
-    const [timeLeft, setTimeLeft] = useState(10); // 20 minutos en segundos son 1200
+    const [timeLeft, setTimeLeft] = useState(15); // 20 minutos en segundos son 1200
     const navigate = useNavigate();
     const { user } = useContext(AuthContext);
     
@@ -36,7 +36,7 @@ function Timer() {
        
     }
 
-    return <div><p className="numbers">{formatTime(timeLeft)}</p></div>;
+    return <div><p className="numbers">Tiempo restante de invitado {formatTime(timeLeft)}</p></div>;
    
 }
 

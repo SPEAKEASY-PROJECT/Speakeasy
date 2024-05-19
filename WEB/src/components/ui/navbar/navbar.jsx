@@ -12,7 +12,7 @@ return (
     <nav className="main-navbar navbar-expand-lg ">
       <ul className="nav-container">
         <li>Ubicación : {user?.city}</li>
-        <li>¿Cómo estás? {user?.name}</li>
+        <li>¿Cómo estás? {user?.name} Bienvenid@</li>
         <li>{user && (
               <button onClick={doLogout} className="btn btn-sm btn-danger btn-color">Cerrar sesión</button>
             )}

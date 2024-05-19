@@ -46,7 +46,9 @@
 }
 .numbers{
     color: #ffffff;
-    font-size: 30px;
-    margin-top: 50px;
-    margin-left: 70px;
+    font-size: 22px;
+    font-weight: 400px;
+    margin-top: 12px;
+    padding: 5px;
+    background-color: rgba(246, 148, 20, 0.57)
 }

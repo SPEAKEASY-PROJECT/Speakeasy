@@ -1,6 +1,7 @@
 import './locals.css';
 import BaseComponent from '../../components/ui/baseComponents/baseComponents';
 import backgroundImage from '/images/barraBar.jpg';
+import noTrespassing from '/images/acceso.png';
 import { useState, useEffect } from 'react';
 import { getListLocals } from '../../services/api.service';
 import { Link } from 'react-router-dom';
@@ -25,15 +26,19 @@ function Locals() {
 }, []);
 
     if (!locals) {
-        return<div>Lo siento, no tienes acceso! Debes registrarte en la web para disfrutar de esta funcionalidad.</div>
+        return<div className='acceso'><img src={noTrespassing} style={{ height: '57rem', width: '100rem'}} alt="Imagen de prohibido el acceso" /></div>
     }
 
   return (
     // <div><pre>{JSON.stringify(locals, null, 2)}</pre></div>
     <>
       <BaseComponent backgroundImage={backgroundImage} >
+
+
+
+        
         <div className='container py-2 fondo-locals'>
-          <p className='text-location'><strong>Tu estas en: Madrid</strong></p>
+          <p className='text-location'><strong>Te encuentras en: Madrid</strong></p>
           <p className='text-location'>Estos son los locales en cerca tuyo:</p>
         </div>
         <div className="container py-5 locals">
