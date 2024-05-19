@@ -5,6 +5,7 @@ const users = require("../controllers/users.controller");
 const rating = require("../controllers/rating.controller");
 const auth = require("../middlewares/auth.middleware");
 const playlist = require("../controllers/spotify.controller");
+const chat = require("../controllers/chat.controller");
 
 //Locals routes
 router.post('/locals', auth.checkAuth, locals.create);
@@ -31,6 +32,13 @@ router.get('/albums', playlist.listAlbum);
 router.get('/artist-search', playlist.searchArtists);
 router.get('/artists/:id/albums', playlist.getAlbums);
 router.get('/albums/:id/tracks', playlist.listTrack);
+
+
+//CHAT
+router.post("/chats", chat.create);
+router.get("/chat/:id", chat.detail);
+router.put("/chat/:id", chat.update);
+router.delete("/chat/:id", chat.delete);
 
 
 module.exports = router;

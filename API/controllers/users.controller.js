@@ -113,9 +113,3 @@ module.exports.delete = (req, res, next) => {
 module.exports.profile = (req, res) => {
     res.json(req.user);
 };
-
-
-
-
-
-

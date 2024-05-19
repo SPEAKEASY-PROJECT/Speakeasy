@@ -5,10 +5,10 @@ const http = axios.create({
     baseURL: 'http://localhost:3000/api/v1',
 });
 
-// http.interceptors.request.use(function (config) {
-//   config.headers.authorization = `BEARER ${localStorage.getItem("token")}`;
-//   return config;
-// });
+http.interceptors.request.use(function (config) {
+  config.headers.authorization = `BEARER ${localStorage.getItem("token")}`;
+  return config;
+});
 
 http.interceptors.request.use(function (config) {
   const token = localStorage.getItem("token");
@@ -99,4 +99,25 @@ export function getAlbumsArtist(id) {
 
 export function getListTracks(id) {
   return http.get(`/albums/${id}/tracks`);
+}
+
+
+//CHAT
+export function createChat(data) {
+  return http.post("/chats", data);
+}
+
+// Servicio para obtener un chat por ID
+export function getChat(id) {
+  return http.get(`/chats/${id}`);
+}
+
+// Servicio para actualizar un chat
+export function updateChat(id, data) {
+  return http.put(`/chats/${id}`, data);
+}
+
+// Servicio para eliminar un chat
+export function deleteChat(id) {
+  return http.delete(`/chats/${id}`);
 }

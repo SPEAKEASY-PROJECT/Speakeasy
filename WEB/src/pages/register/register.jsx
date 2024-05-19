@@ -45,7 +45,9 @@ function Register() {
 
     return (
         <div className='register'>
-            {/* <div className='text'>Registrar un nuevo usuario</div> */}
+            <p>Regístrate para descubrir un mundo de cocktails exquisitos, 
+                jazz envolvente y eventos exclusivos. Rellena todos los campos y prepárate porque 
+                ¡La puerta a la elegancia de otra época te espera!"</p>
             <div className="form-container">
                 <form onSubmit={handleSubmit(onSubmit)}>
                     {error && (

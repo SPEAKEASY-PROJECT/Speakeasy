@@ -27,7 +27,12 @@ function Login() {
     }
 
     return (
+        
+        
+        
+        
         <div className='login'>
+            <p>Ingresa tus datos aquí para sumergirte en la atmósfera de jazz y elegancia de la época</p>
             <div className="form-container1">
                 <form onSubmit={handleSubmit(onSubmit)}>
                     {error && (

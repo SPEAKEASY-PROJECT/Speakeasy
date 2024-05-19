@@ -1,5 +1,4 @@
 require("dotenv").config();
-
 const express = require("express");
 const logger = require("morgan");
 
@@ -9,7 +8,7 @@ const cors = require("./middlewares/cors.middleware");
 
 const app = express();
 
-//SPOTY
+//Spoty
 require("./configs/spotify.config");
 
 //Middlewares
