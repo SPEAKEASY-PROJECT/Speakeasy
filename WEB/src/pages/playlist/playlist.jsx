@@ -44,23 +44,22 @@ function Playlist() {
   return (
     <>
       <BaseComponent backgroundImage={backgroundImage} >
-        <div>
-          <p>ELIGE TU MÚSICA Y COMPÁRTELA</p>
-          <p>Arma tu play list y compartela o llevala contigo a tu local preferido</p>
+        <div className='title-playlist'>
+          <p>ELIGE TU MUSICA Y COMPARTELA</p>
         </div>
 
         <form onSubmit={handleSubmit} className='container py-3 artist'>
           <div className='mb-1'>
             <input type='text' className='form-control' name='search' value={search} onChange={(e) => setSearch(e.target.value)} />
           </div>
-            <button type='submit' className='btn btn-primary'>Selecciona un artista</button>
+            <button type='submit' className='btn btn-primary'>Buscar un artista</button>
         </form> 
       
 
         <div className="container py-4">
-          <div className="row row-cols-1 row-cols-md-2 g-4 gap-4">
+          <div className="albums row row-cols-1 row-cols-md-2 gap-5">
             {artists && artists?.map((artist) => (
-              <div className="card" style={{ width: '18rem' }} key={artist.id}>
+              <div className="card"  key={artist.id}>
                 <img src={artist.images[0]?.url} className="card-img-top" alt="Imágenes de Álbumes" />
                 <div className="card-body">
                   <h5 className="card-title">{artist.name}</h5>

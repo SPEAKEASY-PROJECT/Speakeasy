@@ -1,4 +1,38 @@
+
+.title-playlist {
+  width: 60%;
+  font-size: 30px;
+  font-family: 'Bangers', cursive;
+  color: #fff;
+  background-color: #f4084b96;
+  text-align: center;
+  justify-content: center;
+  margin-top: -760px;
+  margin-left: 400px;
+}
 .artist {
   width: 30%;
-  margin-top: -400px;
+}
+
+.albums {
+  height: 18rem;
+}
+
+.card {
+  width: 240px;
+  height: auto;
+}
+
+.card-img-top {
+  width: 215px;
+  height: 190px;
+}
+
+.card-body {
+  width: 210px;
+}
+
+.card-title {
+  width: 200px;
+
 }
