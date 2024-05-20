@@ -39,7 +39,7 @@ function Locals() {
         
         <div className='container py-2 fondo-locals'>
           <p className='text-location'><strong>Te encuentras en: Madrid</strong></p>
-          <p className='text-location'>Estos son los locales en cerca tuyo:</p>
+          <p className='text-location'>Estos son los locales que están cerca tuyo:</p>
         </div>
         <div className="container py-5 locals">
             <div className="row row-cols-1 row-cols-md-2 g-4 gap-4">

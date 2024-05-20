@@ -44,10 +44,14 @@ function Register() {
     }
 
     return (
-        <div className='register'>
-            <p>Regístrate para descubrir un mundo de cocktails exquisitos, 
-                jazz envolvente y eventos exclusivos. Rellena todos los campos y prepárate porque 
-                ¡La puerta a la elegancia de otra época te espera!"</p>
+        <div className='pantalla-registro'>
+            <div className='registro'>
+                <p className='title-registro'> Registro</p>
+                <div>
+                    <p className='registrate'>Regístrate para descubrir un mundo de cocktails exquisitos, 
+                    jazz envolvente y eventos exclusivos. Rellena todos los campos y prepárate porque 
+                    ¡La puerta a la elegancia de otra época te espera!"</p>
+                </div>
             <div className="form-container">
                 <form onSubmit={handleSubmit(onSubmit)}>
                     {error && (
@@ -105,6 +109,7 @@ function Register() {
                     </div>
                     <button type='submit' className='btn btn-outline-light'>Registrarse</button>
                 </form>
+            </div>
             </div>
         </div>
     );

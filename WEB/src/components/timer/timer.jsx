@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import AuthContext from "../../contexts/auth.context";
 
 function Timer() {
-    const [timeLeft, setTimeLeft] = useState(15); // 20 minutos en segundos son 1200
+    const [timeLeft, setTimeLeft] = useState(1200); // 20 minutos en segundos son 1200
     const navigate = useNavigate();
     const { user } = useContext(AuthContext);
     
