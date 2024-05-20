@@ -16,11 +16,11 @@ function Counter() {
   }
 
   return (
-    <div className='d-flex'>
-      <p className='count'>{count}</p>
-      <div className='d-grid'>
-        <button className='btn-btn-primary btn-sm btn-plus' onClick={handleCountUp}>+</button>
+    <div className='counter d-flex'>
+      <div className='buyers'>
         <button className='btn-btn-primary btn-sm btn-plus' onClick={handleCountDown} >-</button>
+        <p className='count'>{count}</p>
+        <button className='btn-btn-primary btn-sm btn-plus' onClick={handleCountUp}>+</button>
       </div>
     </div>
     

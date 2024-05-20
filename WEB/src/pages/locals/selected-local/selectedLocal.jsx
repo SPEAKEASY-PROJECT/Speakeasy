@@ -16,7 +16,7 @@ function SelectedLocal() {
 
   return (
         <BaseComponent backgroundImage={backgroundImage} >
-           <div className='className="container py-5 locals'>
+           <div className='container py-5 locals'>
               <div className="card g-2" style={{ width: '16rem' }} key={local?.id} >
                   <div className="card-body">
                     <h5 className="card-title">{local?.name}</h5>

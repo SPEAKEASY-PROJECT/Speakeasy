@@ -44,8 +44,12 @@ function Playlist() {
   return (
     <>
       <BaseComponent backgroundImage={backgroundImage} >
+        <div>
+          <p>ELIGE TU MÚSICA Y COMPÁRTELA</p>
+          <p>Arma tu play list y compartela o llevala contigo a tu local preferido</p>
+        </div>
 
-        <form onSubmit={handleSubmit} className='container py-3'>
+        <form onSubmit={handleSubmit} className='container py-3 artist'>
           <div className='mb-1'>
             <input type='text' className='form-control' name='search' value={search} onChange={(e) => setSearch(e.target.value)} />
           </div>
@@ -94,6 +98,7 @@ function Playlist() {
 
 
         <ul className="list-group container py-4">
+          <p>Seleciona tu canción</p>
           {tracks.map((track, index) => (
             <li key={index} className="list-group-item d-flex">
               <span className="me-auto">{track.name}</span>
