@@ -9,11 +9,16 @@ function Comunity() {
 
   return (
     <>
-   <p>¡Únete a nuestra exclusiva comunidad y sumérgete en conversaciones animadas donde poder compartir
-     tus experiencias, conocer a otros entusiastas de la época y disfrutar de la compañía
-      en nuestro elegante salón virtual."</p>
-      <BaseComponent backgroundImage={backgroundImage} />
-      <Chat />
+      <BaseComponent backgroundImage={backgroundImage}>
+        <div>
+          <p className='comunity'>NUESTRA COMUNIDAD</p>
+          <div>
+          <p className='text-comunity' >¡Únete a nuestra exclusiva comunidad y sumérgete en conversaciones animadas donde poder compartir
+          tus experiencias, conocer a otros entusiastas de la época y disfrutar de la compañía
+          en nuestro elegante salón virtual.</p></div>
+        </div>
+        <Chat />
+      </BaseComponent>
     </>
   )
 }

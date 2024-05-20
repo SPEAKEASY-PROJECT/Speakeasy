@@ -46,7 +46,7 @@ function Locals() {
                 <div className="card g-2" style={{ width: '14rem' }} key={local.id} >
                   <div className="card-body">
                     <h5 className="card-title">{local.name}</h5>
-                    <p className="card-title">Musica : {local.style}</p>
+                    <p className="card-title">Música : {local.style}</p>
                     <div className="card" style={{ width: '10rem' }} key={local.id}>
                       <img src={local.image}  style={{ height: '8rem' }} className="card-img-top1" alt="Imágenes de locales" />
                     </div>

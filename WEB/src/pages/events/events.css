@@ -1,0 +1,79 @@
+.events-title {
+    width: 60%;
+    font-size: 30px;
+    font-family: 'Bangers', cursive;
+    color: #fff;
+    background-color:#f4084bab;
+    text-align: center;
+    justify-content: center;
+    margin-top: -760px;
+    margin-left: 450px;
+}
+
+
+.text-events {
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    background-color:#220e14b1;
+    width: 820px;
+    margin-left: 600px;
+    margin-top: 50px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.text-events2 {
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    background-color:#cb0c32b9;
+    width: 600px;
+    margin-left: 350px;
+    margin-top: 50px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.text-events3 {
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    background-color:#cb0c32b9;
+    width: 600px;
+    margin-left: 100px;
+    margin-top: 50px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.eventos-tipos {
+margin-top: 40px;
+}
+
+.texto-tipos {  
+    font-size: 30px;
+    font-family: 'Bangers', cursive;
+    color: #ffffff;
+    background-color:#220e14bc;
+    width: 200px;
+    padding: 18px;
+    margin-left: 650px;
+    margin-top: 80px;
+} 
+
+.texto-tiposInau {
+    font-size: 30px;
+    font-family: 'Bangers', cursive;
+    color: #ffffff;
+    background-color:#220e14bc;
+    width: 200px;
+    padding: 18px;
+    margin-left: 250px;
+    margin-top: 80px;
+}
+
+
+.directos {
+  display: flex;
+}

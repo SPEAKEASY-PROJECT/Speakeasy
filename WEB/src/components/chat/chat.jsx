@@ -55,7 +55,7 @@ function Chat() {
             <ul className="chat-list">
                 {chats.map((chat) => (
                     <li key={chat._id} className="chat-item">
-                        <p>{chat.text} . Escrito y enviado por : {chat.owner}</p>
+                        <p>MENSAJE: {chat.text}. USUARIO: {chat.owner}</p>
                         <button className='btn btn-warning' onClick={() => handleDelete(chat._id)}>Eliminar</button>
                     </li>
                 ))}
