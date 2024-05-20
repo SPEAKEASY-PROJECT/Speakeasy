@@ -18,9 +18,9 @@ function Counter() {
   return (
     <div className='counter d-flex'>
       <div className='buyers'>
-        <button className='btn-btn-primary btn-sm btn-plus' onClick={handleCountDown} >-</button>
+        <button className='btn-btn-primary btn-sm btn-plus signo' onClick={handleCountDown} >-</button>
         <p className='count'>{count}</p>
-        <button className='btn-btn-primary btn-sm btn-plus' onClick={handleCountUp}>+</button>
+        <button className='btn-btn-primary btn-sm btn-plus signo' onClick={handleCountUp}>+</button>
       </div>
     </div>
     

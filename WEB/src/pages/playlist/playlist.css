@@ -13,9 +13,24 @@
 .artist {
   width: 30%;
 }
-
+.albums-artist {
+  height: 20rem;
+  overflow: hidden;
+  margin-left: 100px;
+}
 .albums {
-  height: 18rem;
+  height: 21rem;
+  overflow: hidden;
+  margin-top: -350px;
+  margin-left: 150px;
+}
+.cancion {
+  width: 50%;
+  height: 19rem;
+  overflow: hidden;
+  margin-top: -450px;
+  margin-left: 450px;
+
 }
 
 .card {

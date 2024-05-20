@@ -1,3 +1,4 @@
+import './selectedLocal.css';
 import { useState, useEffect } from 'react';
 import BaseComponent from '../../../components/ui/baseComponents/baseComponents';
 import { useParams } from 'react-router-dom'
@@ -16,20 +17,23 @@ function SelectedLocal() {
 
   return (
         <BaseComponent backgroundImage={backgroundImage} >
-           <div>
-            <p></p>
-           </div>
-           <div className='container py-5 locals'>
-              <div className="card g-2" style={{ width: '16rem' }} key={local?.id} >
+          <div className='title-selected'>
+            <p>HAZ TU PEDIDO DESDE TU LOCAL PREFERIDO</p>
+          </div>
+           
+          <div className='container py-5 locals'>
+          
+              <div className="card g-2" style={{ width: '18rem' }} key={local?.id} >
+              <div className='bebidas'>
                   <div className="card-body">
                     <h5 className="card-title">{local?.name}</h5>
                     <p className="card-title">Música : {local?.style}</p>
-                    <div className="card" style={{ width: '10rem' }} key={local?.id}>
-                      <img src={local?.image}  style={{ height: '8rem' }} className="card-img-top" alt="Imágenes de locales" />
-                    </div>
+                  <div className="card" style={{ width: '10rem' }} key={local?.id}>
+                    <img src={local?.image}  style={{ height: '8rem' }} className="card-img-top" alt="Imágenes de locales" />
+                  </div>
                   </div>
               </div>
-            
+            </div>
             <ItemList />
             </div>
       </ BaseComponent >

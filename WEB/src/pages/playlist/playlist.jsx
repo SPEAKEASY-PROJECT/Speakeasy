@@ -57,7 +57,7 @@ function Playlist() {
       
 
         <div className="container py-4">
-          <div className="albums row row-cols-1 row-cols-md-2 gap-5">
+          <div className="albums-artist row row-cols-1 row-cols-md-1 gap-5">
             {artists && artists?.map((artist) => (
               <div className="card"  key={artist.id}>
                 <img src={artist.images[0]?.url} className="card-img-top" alt="Imágenes de Álbumes" />
@@ -77,7 +77,7 @@ function Playlist() {
 
 
         <div className="container py-4">
-          <div className="row row-cols-1 row-cols-md-2 g-4 gap-4">
+          <div className="albums row row-cols-1 row-cols-md-2 g-4 gap-4">
             {albums && albums?.map((album) => (
               <div className="card" style={{ width: '18rem' }} key={album.id}>
                 <img src={album.images[0]?.url} className="card-img-top" alt="Imágenes de Canciones" />
@@ -96,9 +96,8 @@ function Playlist() {
         </div>
 
 
-        <ul className="list-group container py-4">
-          <p>Seleciona tu canción</p>
-          {tracks.map((track, index) => (
+        <ul className="list-group container py-4 cancion">
+            {tracks.map((track, index) => (
             <li key={index} className="list-group-item d-flex">
               <span className="me-auto">{track.name}</span>
               <audio controls src={track.preview_url} className="me-auto"></audio>

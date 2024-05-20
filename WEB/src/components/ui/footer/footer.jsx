@@ -9,6 +9,7 @@ function Footer() {
       <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
         <p className="title-map">Site MAP</p>
         <ul className="site-map">
+          <li><Link to="/intro">Intro</Link></li>
           <li><Link to="/home">Home</Link></li>
           <li><Link to="/playlist">Playlist</Link></li>
           <li><Link to="/locals">Locales</Link></li>

@@ -26,7 +26,7 @@ function Locals() {
 }, []);
 
     if (!locals) {
-        return<div className='acceso'><img src={noTrespassing} style={{ height: '57rem', width: '100rem'}} alt="Imagen de prohibido el acceso" /></div>
+        return<div className='acceso'><img src={noTrespassing} style={{ height: '60rem', width: '120rem', backgroundImage: 'cover'}} alt="Imagen de prohibido el acceso" /></div>
     }
 
   return (

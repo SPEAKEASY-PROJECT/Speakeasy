@@ -9,7 +9,7 @@ const handleTooggle = () => onTooggle(event);
   return (
 
     <div className='single'>
-      <div className='item card position-relative'>
+      <div className='item card position-relative pedidos'>
         <div className='item -actions position-absolute'>
           <i className={`fa fa-heart${event.fav ? 'text-danger' : ''}`} role='button' onClick={handleTooggle}></i>
         </div>

@@ -1,0 +1,16 @@
+.title-selected {
+  width: 60%;
+  font-size: 30px;
+  font-family: 'Bangers', cursive;
+  color: #fff;
+  background-color: #f4084b96;
+  text-align: center;
+  justify-content: center;
+  margin-top: -780px;
+  margin-left: 400px;
+}
+.text-bebidas {
+  font-size: 28px;
+  color: #fff;
+  margin-left: 200px;
+}
