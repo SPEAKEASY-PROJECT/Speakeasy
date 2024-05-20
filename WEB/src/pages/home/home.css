@@ -1,0 +1,24 @@
+.home {
+  width: 65%;
+  height: 50vh;
+  margin-top: -780px;
+  margin-left: 400px;
+  color: #fff;
+}
+.title-home {
+  font-size: 30px;
+  font-family: 'Bangers', cursive;
+  color: #fff;
+  background-color: rgba(249, 8, 140, 0.532);
+  text-align: center;
+  justify-content: center;
+}
+.text-home {
+  width: 500px;
+  height: 60vh;
+  background-color: rgba(58, 45, 40, 0.8);
+  padding: 30px;
+  font-size: 20px;
+  margin-top: 50px;
+  margin-left: 740px;
+}

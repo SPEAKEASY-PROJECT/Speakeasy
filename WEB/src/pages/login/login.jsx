@@ -32,7 +32,12 @@ function Login() {
         
         
         <div className='login'>
-            <p>Ingresa tus datos aquí para sumergirte en la atmósfera de jazz y elegancia de la época</p>
+            <div className='Login-text'>
+                <p className='title-login'>ENTRA EN SPEAKEASY SHhh<br/>
+                 (has de estar registrado)</p>
+                <p className='text-login'>Ingresa tus datos aquí para sumergirte en la atmósfera de jazz y elegancia de la época</p>
+            </div>
+            
             <div className="form-container1">
                 <form onSubmit={handleSubmit(onSubmit)}>
                     {error && (
